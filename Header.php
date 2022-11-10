@@ -11,11 +11,11 @@
 
 
 
-  <div class="container">
+  <div class="container-fluid">
    <div class="row">
      <div class="col">
 
-       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+       <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
          <div class="container-fluid">
            <ul class="navbar-nav">
              <a class="navbar-brand" href="#">
