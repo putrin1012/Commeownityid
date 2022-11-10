@@ -2,12 +2,21 @@
 <html>
 <head>
 <style>
-.error {color: #FF0000;}
+/* Modify the background color */
+
+.navbar-custom {
+    background-color: #6C452D;
+}
+/* Modify brand and text color */
+
+.navbar-custom .navbar-item {
+    color: black;
+}
 </style>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body style="background-color: #EDD3A8">
 
 
 
@@ -15,7 +24,7 @@
    <div class="row">
      <div class="col">
 
-       <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+       <nav class="navbar navbar-expand-lg navbar-custom">
          <div class="container-fluid">
            <ul class="navbar-nav">
              <a class="navbar-brand" href="#">
