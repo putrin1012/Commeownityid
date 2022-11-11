@@ -9,7 +9,7 @@
 }
 /* Modify brand and text color */
 
-.navbar-custom .navbar-item {
+.navbar-custom .navbar-nav .nav-link {
     color: black;
 }
 </style>

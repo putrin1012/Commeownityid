@@ -1,6 +1,6 @@
-<div id="post", style="background-color: #FFFFFF">
+<div id="post", style="max-width: 500px;margin-top: auto;background-color: #FFFFFF">
   <div >
-    <img src="img/logo_dark.png" style="width: 75px;margin-right: 4px;">
+    <img src="img/logo_dark.png" style="width: 75px;margin-right: 4px;border: solid;border-radius:20%">
   </div>
     <div style="font-weigth: bold;color: #405d9b">Test Post</div>
     Ini cuma buat ngetest doang

@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #ffffff;
+  background-color: #555;
   position: fixed;
   height: 100%;
   overflow: auto;
