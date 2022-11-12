@@ -1,4 +1,4 @@
-<div id="post", style="max-width: 500px;margin-top: auto;background-color: #FFFFFF">
+<div id="post", style="max-width: 500px;background-color: #FFFFFF">
   <div >
     <img src="img/logo_dark.png" style="width: 75px;margin-right: 4px;border: solid;border-radius:20%">
   </div>
