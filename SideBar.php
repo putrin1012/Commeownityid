@@ -62,7 +62,7 @@ div.content {
 <body>
 
 <div class="sidebar">
-  <a href="profile.php">Profile</a>
+  <a href="Profile.php">Profile</a>
   <a href="#news">Bookmarks</a>
   <a href="#news">Settings</a>
   <a href="#about">About</a>
