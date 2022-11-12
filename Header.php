@@ -34,6 +34,12 @@
                   <h5 class="text-white h4">Collapsed content</h5>
                   <span class="text-muted">Toggleable via the navbar brand.</span>
               </div>
+<<<<<<< HEAD
+
+
+
+
+=======
               <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,21 +47,21 @@
                   </button>
                 </div>
               </nav>
+>>>>>>> 783985928ceb93048101e7edad09298e4ef134a2
              <li class="nav-item">
-               <a class="nav-link" href="index.php">Home</a>
+               <a class="nav-link" href="_index.php">Home</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="index.php">Articles</a>
+               <a class="nav-link" href="Articles.php">Articles</a>
              </li>
                 <form class="d-flex" role="search">
                   <a class="nav-link" href="index.php">Search</a>
-                  <input class="form-control me-2" type="search" placeholder="search here" aria-label="Search"> 
+                  <input class="form-control me-2" type="search" placeholder="search here" aria-label="Search">
                 </form>
 
             </ul>
           </div>
       </nav>
-    <br>
-
-
-    
+    </div>
+  </div>
+</div>
