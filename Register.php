@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    include('db.php');
+    if (isset($_POST['register'])) {
+        
+    }
+?>
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

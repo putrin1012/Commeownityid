@@ -19,7 +19,7 @@
 				        </div>
 
                     <form class="login100-form validate-form">
-                        <span class="login100-form-title"> Login </span>
+                        <span class="login100-form-title"> Selamat Datang! &#128049; </span>
                         <div class="wrap-input100 validate-input" data-validate="valid email is required: meow@paw.com">
                             <input class="input100" type="email" name="email" placeholder="Email">
                             <span class="focus-input100"></span>
@@ -37,11 +37,11 @@
                             </span>
                         </div>
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">Login</button>
+                            <button class="login100-form-btn">Masuk</button>
                         </div>
                         <div class="text-center p-t-12">
-                            <span class="txt1">Don't have any account?</span>
-                            <a class="txt2" href="Register.php"> Register here meow~ </a>
+                            <span class="txt1">Belum memiliki akun?</span>
+                            <a class="txt2" href="Register.php"> Daftar di sini meow~ </a>
                         </div>
                         <!-- <div class="text-center p-t-136">
                             <a class="txt2" href="#">
