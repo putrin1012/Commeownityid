@@ -34,20 +34,9 @@
                   <h5 class="text-white h4">Collapsed content</h5>
                   <span class="text-muted">Toggleable via the navbar brand.</span>
               </div>
-<<<<<<< HEAD
 
 
 
-
-=======
-              <nav class="navbar navbar-dark bg-dark">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </div>
-              </nav>
->>>>>>> 783985928ceb93048101e7edad09298e4ef134a2
              <li class="nav-item">
                <a class="nav-link" href="_index.php">Home</a>
              </li>
