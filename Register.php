@@ -2,7 +2,30 @@
     session_start();
     include('db.php');
     if (isset($_POST['register'])) {
-        
+        $userName = $_POST['userName'];
+        $Email = $_POST['Email'];
+        $Location = $_POST['Location'];
+        $Password = $_POST['Password'];
+        $password_hash = password_hash($Password, PASSWORD_BCRYPT);
+        $query = $connection->prepare("SELECT * FROM users WHERE Email =: Email");
+        $query->bindParam("email",$Email, PDO::PARAM_STR);
+        $query->execute();
+        if ($query->rowCount() > 0){
+            echo '<p class="error">Alamat email sudah terdaftar!</p>';
+        }
+        if ($query->rowCount() == 0) {
+            $query = $connection->prepare("INSERT INTO users(userName, Email, Location, Password) VALUES (:userName, :Email, :Location, :password_hash, :email)");
+            $query->bindParam("userName", $userName, PDO::PARAM_STR);
+            $query->bindParam("Email", $Email, PDO::PARAM_STR);
+            $query->bindParam("Location", $Location, PDO::PARAM_STR);
+            $query->bindParam("Password", $Password, PDO::PARAM_STR);
+            $result = $query->execute();
+            if ($result) {
+                echo '<p class="success">Anda berhasil mendaftar!</p>';
+            } else {
+                echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
+            }
+        }
     }
 ?>
 
