@@ -62,6 +62,7 @@ div.content {
 <body>
 
 <div class="sidebar">
+  <img src="img/Untitled271.jpg" style="width: 75px;margin-right: 4px;border: solid;border-radius:50%">
   <a href="Profile.php">Profile</a>
   <a href="#news">Bookmarks</a>
   <a href="#news">Settings</a>

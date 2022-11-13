@@ -13,6 +13,7 @@
 
       <?php include("NewPost.php");
       for($i = 0; $i < 10; $i++){
+        ?></br><?php
         include("post.php");}
       ?>
 
