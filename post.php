@@ -23,15 +23,18 @@
   .post .post-heading {
     height: 95px;
     padding: 20px 15px;
+
   }
   .post .post-heading .avatar {
     width: 60px;
     height: 60px;
     display: block;
     margin-right: 15px;
+
   }
   .post .post-heading .meta .title {
     margin-bottom: 0;
+
   }
   .post .post-heading .meta .title a {
     color: black;
@@ -46,19 +49,24 @@
   .post .post-image .image {
     width: 100%;
     height: auto;
+
   }
   .post .post-description {
     padding: 15px;
+
   }
   .post .post-description p {
     font-size: 14px;
+
   }
   .post .post-description .stats {
     margin-top: 20px;
+
   }
   .post .post-description .stats .stat-item {
     display: inline-block;
     margin-right: 15px;
+
   }
   .post .post-description .stats .stat-item .icon {
     margin-right: 8px;
@@ -97,7 +105,7 @@
   }
   .post .post-footer .comments-list .comment .comment-heading .time {
     font-size: 12px;
-    color: #aaa;
+    color: #;
     margin-top: 0;
     display: inline;
   }
@@ -114,7 +122,7 @@
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <div class="container bootstrap snippets bootdey">
     <div class="col-sm-8">
-        <div class="panel panel-white post panel-shadow">
+        <div class="panel panel-white post panel-shadow" style="background-color:white;">
             <div class="post-heading post-white">
                 <div class="pull-left image">
                     <img src="https://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
