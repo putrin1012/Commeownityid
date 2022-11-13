@@ -3,21 +3,22 @@
  ?>
 
    <div class="row">
-     <div class="col-4">
+     <div class="col-2">
        <?php include("Sidebar.php");?>
      </div>
-    <div class="col-8">
-
+    <div class="col-10">
       </br>
-      <?php
-        
-        ?>
+        <?php include("userInfo.php"); ?>
+      </br>
+
+      <?php include("NewPost.php");
+      for($i = 0; $i < 10; $i++){
+        include("post.php");}
+      ?>
 
       </div>
     </div>
 
 
 
-  <?php
-include("footer.php");
- ?>
+  <?php include("footer.php"); ?>
