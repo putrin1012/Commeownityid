@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2022 at 09:55 AM
+-- Generation Time: Nov 13, 2022 at 03:55 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -71,13 +71,6 @@ CREATE TABLE `comments` (
   `textContent` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `DateTimePosted` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`commentID`, `userID`, `postID`, `textContent`, `DateTimePosted`) VALUES
-(10069, 2, 3, 'hello hei', '2022-11-12 12:22:32');
 
 -- --------------------------------------------------------
 
@@ -178,13 +171,41 @@ ALTER TABLE `posts`
 -- Indexes for table `tags`
 --
 ALTER TABLE `tags`
-  ADD KEY `CategoriesOf` (`PostID`);
+  ADD PRIMARY KEY (`PostID`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `ArticleID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10101;
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10070;
+
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- Constraints for dumped tables

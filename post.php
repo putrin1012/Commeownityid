@@ -122,7 +122,7 @@
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <div class="container bootstrap snippets bootdey">
     <div class="col-sm-8">
-        <div class="panel panel-white post panel-shadow" style="background-color:white;">
+        <div class="panel panel-white post panel-shadow" style="background-color:white;width:1000px">
             <div class="post-heading post-white">
                 <div class="pull-left image">
                     <img src="https://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
