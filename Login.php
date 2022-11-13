@@ -1,3 +1,34 @@
+<?php
+    session_start();
+    require_once('config.php');
+?>
+
+<?php
+    $login_error_message = '';
+    $register_error_message = '';
+
+    if (isset($_POST['login'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        if ($email == "") {
+            $login_error_message = 'Email field is required!';
+        } else if ($password == "") {
+            $login_error_message = 'Password field is required!';
+        } else {
+            $ID = $sql->login($email, $password); // check user login
+            if($ID > 0)
+            {
+                $_SESSION['ID'] = $ID; // Set Session
+                header("Location: _index.php"); // Redirect user to the profile.php
+            }
+            else
+            {
+                $login_error_message = 'Invalid login details!';
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,6 +41,13 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
+        <div>
+            <?php
+                if (isset($_POST['login'])) {
+                    echo "Button masuk berhasil"
+                }
+            ?>
+        </div>
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
@@ -37,7 +75,7 @@
                             </span>
                         </div>
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">Masuk</button>
+                            <input type="submit" class="login100-form-btn" name="login" value="login">Masuk</button>
                         </div>
                         <div class="text-center p-t-12">
                             <span class="txt1">Belum memiliki akun?</span>
