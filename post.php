@@ -1,8 +1,8 @@
-<div id="post", style="max-width: 500px;background-color: #FFFFFF">
+<div id="post", style="max-width: 1000px;background-color: #FFFFFF">
   <div>
     <div class="row">
       <div class="col-2">
-    <img src="img/logo_dark.png" style="width: 75px;margin-right: 4px;border: solid;border-radius:20%">
+    <img src="img/logo_dark.png" style="width: 75px;margin-right: 4px;border: solid;border-radius:50%">
   </div>
   <div class="col-10">
     <div style="font-weigth: bold;color: #405d9b">Test Post</div>

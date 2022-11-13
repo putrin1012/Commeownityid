@@ -20,7 +20,7 @@
 
 
 
-  <div class="container-fluid">
+
    <div class="row">
      <div class="col">
 
@@ -53,4 +53,3 @@
       </nav>
     </div>
   </div>
-</div>
