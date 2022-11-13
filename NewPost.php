@@ -1,14 +1,29 @@
-<div id="post", style="max-width: 1000px;background-color: #FFFFFF">
-  <div>
-  </div>
-  <form class="d-flex" role="search">
-    <a class="nav-link" href="index.php"></a>
-  </br></br>
-    <input class="form-control me-2" type="search" placeholder="Tuliskan sesuatu...">
-  </form>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.profile-tabs-content .tab-pane {
+    padding: 1.5rem;
+}
 
-
-
-  <a href="">Media </a><a href="">Video</a><span style="color: #999;">
-<button type="submit" class="btn btn-primary">Post</button>
-  </div>
+.post-editor .post-field {
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+    border-radius: .25rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    border-color: #eceeef
+}
+</style>
+</head>
+<body>
+<div class="tab-pane active" id="profile-overview" role="tabpanel">
+<div class="post-editor">
+    <textarea name="post-field" id="post-field" class="post-field" placeholder="Write Something Cool!"></textarea>
+    <div class="d-flex">
+        <button class="btn btn-success px-4 py-1">Post</button>
+    </div>
+</div>
+</div>
+<html>
