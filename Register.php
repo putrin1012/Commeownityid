@@ -15,7 +15,11 @@
         if ($result->total > 0){
             echo '<p class="error">Alamat email sudah terdaftar!</p>';
         }else {
-            $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
+            $sql->prepare("INSERT INTO users (userName, Email, Location, Password) VALUES(?,?,?,?)", array($userName, $Email, $Location, $password_hash);
+            $sql->bindValue(1, $_POST['username']);
+            $sql->bindValue(2, $_POST['Email']);
+            $sql->bindValue(3, $_POST['Location']);
+            $sql->bindValue(4, $_POST['password_hash']);
             $stmtinsert = $conn->prepare($sql);
             $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
             if ($result) {
