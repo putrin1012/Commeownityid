@@ -3,11 +3,14 @@
  ?>
 
    <div class="row">
-     <div class="col-4">
+     <div class="col-2">
        <?php include("Sidebar.php");?>
      </div>
     <div class="col-8">
+    </br>
         <?php
+        include("NewPost.php");
+        ?></br></br><?php
         for($i = 0; $i < 10; $i++){
           include("post.php");
         ?>
