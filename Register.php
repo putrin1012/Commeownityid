@@ -1,27 +1,25 @@
 <?php
-    session_start();
-    include('db.php');
+    require_once('config.php');
+?>
+<?php
     if (isset($_POST['register'])) {
-        $userName = $_POST['userName'];
+        $userName = $_POST['username'];
         $Email = $_POST['Email'];
         $Location = $_POST['Location'];
         $Password = $_POST['Password'];
         $password_hash = password_hash($Password, PASSWORD_BCRYPT);
-        $query = $connection->prepare("SELECT * FROM users WHERE Email =: Email");
-        $query->bindParam("email",$Email, PDO::PARAM_STR);
-        $query->execute();
-        if ($query->rowCount() > 0){
+        $sql = $conn->prepare("SELECT COUNT(*) AS 'total' FROM users WHERE Email = :Email");
+        $sql->execute(array(':Email' => $Email));
+        $result = $sql->fetchObject();
+        
+        if ($result->total > 0){
             echo '<p class="error">Alamat email sudah terdaftar!</p>';
-        }
-        if ($query->rowCount() == 0) {
-            $query = $connection->prepare("INSERT INTO users(userName, Email, Location, Password) VALUES (:userName, :Email, :Location, :password_hash, :email)");
-            $query->bindParam("userName", $userName, PDO::PARAM_STR);
-            $query->bindParam("Email", $Email, PDO::PARAM_STR);
-            $query->bindParam("Location", $Location, PDO::PARAM_STR);
-            $query->bindParam("Password", $Password, PDO::PARAM_STR);
-            $result = $query->execute();
+        }else {
+            $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
+            $stmtinsert = $conn->prepare($sql);
+            $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
             if ($result) {
-                echo '<p class="success">Anda berhasil mendaftar!</p>';
+                echo '<p class="success">Anda berhasil terdaftar!</p>';
             } else {
                 echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
             }
@@ -39,56 +37,75 @@
     <title>Register</title>
 </head>
 <body>
-    <form class="form-inline" name="Registration Form" action="" method="get">
+    <!-- <div>
+        ?php
+            if (isset($_POST['register'])){
+                echo "Data Submitted.";
+                $userName = $_POST['username'];
+                $Email = $_POST['Email'];
+                $Location = $_POST['Location'];
+                $Password = $_POST['Password'];
+                
+                $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
+                $stmtinsert = $conn->prepare($sql);
+                $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
+                if ($result){
+                    echo "Anda telah terdaftar.";
+                } else {
+                    "Terjadi kesalahan ketika mendaftar.";
+                }
+            }
+        ?> -->
+    <form class="form-inline" name="Registration Form" action="Register.php" method="post">
         <h3>Username</h3>
-        <input type="text" id="username" />
+        <input type="text" name="username" />
         <h3>Email</h3>
-        <input type="email" id="userEmail" />
+        <input type="email" name="Email" />
         <br />
         <br />
         <!-- <label class="my-1 mr-2" for="inlineFormCustomSelectLocation">Location</label> -->
         <h3>Location</h3>
-        <select class="custom-select my-1 mr-sm-2" id="CustomSelectLocation">
+        <select class="custom-select my-1 mr-sm-2" name="Location">
             <option selected>Lokasi anda...</option>
-            <option value="1">Aceh</option>
-            <option value="2">Bali</option>
-            <option value="3">Bangka Belitung</option>
-            <option value="4">Banten</option>
-            <option value="5">Bengkulu</option>
-            <option value="6">Daerah Istimewa Yogyakarta</option>
-            <option value="7">Gorontalo</option>
-            <option value="8">Jakarta</option>
-            <option value="9">Jambi</option>
-            <option value="10">Jawa Barat</option>
-            <option value="11">Jawa Tengah</option>
-            <option value="12">Jawa Timur</option>
-            <option value="13">Kalimantan Barat</option>
-            <option value="14">Kalimantan Selatan</option>
-            <option value="15">Kalimantan Tengah</option>
-            <option value="16">Kalimantan Timur</option>
-            <option value="17">Kalimantan Utara</option>
-            <option value="18">Kepulauan Riau</option>
-            <option value="19">Lampung</option>
-            <option value="20">Maluku Utara</option>
-            <option value="21">Maluku</option>
-            <option value="23">Nusa Tenggara Barat</option>
-            <option value="24">Nusa Tenggara Timur</option>
-            <option value="25">Papua Barat</option>
-            <option value="26">Papua</option>
-            <option value="27">Riau</option>
-            <option value="28">Sulawesi Selatan</option>
-            <option value="29">Sulawesi Tengah</option>
-            <option value="30">Sulawesi Tenggara</option>
-            <option value="31">Sulawesi Utara</option>
-            <option value="32">Sumatra Barat</option>
-            <option value="33">Sumatra Selatan</option>
-            <option value="34">Sumatra Utara</option>
+            <option value="Aceh">Aceh</option>
+            <option value="Bali">Bali</option>
+            <option value="Bangka Belitung">Bangka Belitung</option>
+            <option value="Banten">Banten</option>
+            <option value="Bengkulu">Bengkulu</option>
+            <option value="Daerah Istimewa Yogyakarta">Daerah Istimewa Yogyakarta</option>
+            <option value="Gorontalo">Gorontalo</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Jambi">Jambi</option>
+            <option value="Jawa Barat">Jawa Barat</option>
+            <option value="Jawa Tengah">Jawa Tengah</option>
+            <option value="Jawa Timur">Jawa Timur</option>
+            <option value="Kalimantan Barat">Kalimantan Barat</option>
+            <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+            <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+            <option value="Kalimantan Timur">Kalimantan Timur</option>
+            <option value="Kalimantan Utara">Kalimantan Utara</option>
+            <option value="Kepulauan Riau">Kepulauan Riau</option>
+            <option value="Lampung">Lampung</option>
+            <option value="Maluku Utara">Maluku Utara</option>
+            <option value="Maluku">Maluku</option>
+            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+            <option value="Papua Barat">Papua Barat</option>
+            <option value="Papua">Papua</option>
+            <option value="Riau">Riau</option>
+            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+            <option value="Sulawesi Utara">Sulawesi Utara</option>
+            <option value="Sumatra Barat">Sumatra Barat</option>
+            <option value="Sumatra Selatan">Sumatra Selatan</option>
+            <option value="Sumatra Utara">Sumatra Utara</option>
         </select>
         <h3>Password</h3>
-        <input type="text" id="userPassword" />
+        <input type="password" name="Password" />
         <br />
         <br />
-        <button type="submit">Register Now</button>
+        <button type="submit" name="register" value="register">Daftar</button>
     </form>
 </body>
 </html>
