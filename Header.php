@@ -21,7 +21,7 @@
 /* Modify brand and text color */
 
 .navbar-custom .navbar-nav .nav-link {
-    color: black;
+    color: white;
 }
 </style>
 

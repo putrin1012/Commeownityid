@@ -24,7 +24,7 @@
       <?php include("tagsInput.php");?>
     </br>
       <div class="d-flex">
-          <button class="btn btn-success px-4 py-1">Post</button>
+          <button class="btn btn-success px-4 py-1"style="background-color:#6C452D;border-color:#6C452D;">Post</button>
       </div>
   </div>
 </div>
