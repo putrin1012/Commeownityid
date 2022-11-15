@@ -11,11 +11,11 @@
         $sql = $conn->prepare("SELECT COUNT(*) AS 'total' FROM users WHERE Email = :Email");
         $sql->execute(array(':Email' => $Email));
         $result = $sql->fetchObject();
-        
+
         if ($result->total > 0){
             echo '<p class="error">Alamat email sudah terdaftar!</p>';
         }else {
-            $sql->prepare("INSERT INTO users (userName, Email, Location, Password) VALUES(?,?,?,?)", array($userName, $Email, $Location, $password_hash);
+            $sql->prepare("INSERT INTO users (userName, Email, Location, Password) VALUES(?,?,?,?)", array($userName, $Email, $Location, $password_hash));
             $sql->bindValue(1, $_POST['username']);
             $sql->bindValue(2, $_POST['Email']);
             $sql->bindValue(3, $_POST['Location']);
@@ -49,7 +49,7 @@
                 $Email = $_POST['Email'];
                 $Location = $_POST['Location'];
                 $Password = $_POST['Password'];
-                
+
                 $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
                 $stmtinsert = $conn->prepare($sql);
                 $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);

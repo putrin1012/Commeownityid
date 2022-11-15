@@ -44,7 +44,7 @@
         <div>
             <?php
                 if (isset($_POST['login'])) {
-                    echo "Button masuk berhasil"
+                    echo "Button masuk berhasil";
                 }
             ?>
         </div>
@@ -95,5 +95,3 @@
         <script src="login.js"></script>
     </body>
 </html>
-
-
