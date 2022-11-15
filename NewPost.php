@@ -19,11 +19,15 @@
 </head>
 <body>
 <div class="tab-pane active" id="profile-overview" role="tabpanel">
-<div class="post-editor">
-    <textarea name="post-field" id="post-field" class="post-field" placeholder="Write Something Cool!"></textarea>
-    <div class="d-flex">
-        <button class="btn btn-success px-4 py-1">Post</button>
-    </div>
+  <div class="post-editor">
+      <textarea name="post-field" id="post-field" class="post-field" placeholder="Write Something Cool!"></textarea>
+      <?php include("tagsInput.php");?>
+    </br>
+      <div class="d-flex">
+          <button class="btn btn-success px-4 py-1">Post</button>
+      </div>
+  </div>
 </div>
-</div>
+
+</body>
 <html>
