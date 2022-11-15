@@ -66,7 +66,7 @@ div.content {
   <img src="img/Untitled271.jpg" style="width: 75px;margin-left: 55px;border: solid;border-radius:50%;">
   </br></br>
   <a href="Profile.php">Profile</a>
-  <a href="#news">Bookmarks</a>
+  <a href="Bookmarks.php">Bookmarks</a>
   <a href="#news">Settings</a>
   <a href="#about">About</a>
 </div>
