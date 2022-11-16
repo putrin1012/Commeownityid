@@ -4,29 +4,29 @@
 ?>
 
 <?php
-    $login_error_message = '';
-    $register_error_message = '';
+    $message = "";
+    try{
+        if(isset($_POST["login"])){
+            if(empty($_POST["email"]) || empty($_POST["password"])){
+                $message = '<label>Email dan Password tidak boleh kosong!</label>';
+            }else{
+                $query = "SELECT * FROM users WHERE Email = :email AND Password = :password";
+                $statement = $conn->prepare($query);
+                $statement->execute(array('email'=>$_POST["email"], 'password'=>$_POST["password"]));
 
-    if (isset($_POST['login'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        if ($email == "") {
-            $login_error_message = 'Email field is required!';
-        } else if ($password == "") {
-            $login_error_message = 'Password field is required!';
-        } else {
-            $ID = $sql->login($email, $password); // check user login
-            if($ID > 0)
-            {
-                $_SESSION['ID'] = $ID; // Set Session
-                header("Location: _index.php"); // Redirect user to the profile.php
-            }
-            else
-            {
-                $login_error_message = 'Invalid login details!';
+                $count = $statement->rowCount();
+                if($count > 0){
+                    $_SESSION["login"] = $_POST["email"];
+                    header("Location: _index.php");
+                }else{
+                    $message = '<label>Email atau Password salah.</label>';
+                }
             }
         }
+    }catch(PDOException $error){
+        $message = $error->getMessage();
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,23 +41,21 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-        <div>
-            <?php
-                if (isset($_POST['login'])) {
-                    echo "Button masuk berhasil"
-                }
-            ?>
-        </div>
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
 
-                <div class="login100-pic js-tilt" data-tilt>
-					          <img src="img/logo_dark.png" alt="IMG">
-				        </div>
-
-                    <form class="login100-form validate-form">
+                    <div class="login100-pic js-tilt" data-tilt>
+                                <img src="img/logo_dark.png" alt="IMG">
+                    </div>
+                    
+                    <form class="login100-form validate-form" action="" method="post">
                         <span class="login100-form-title"> Selamat Datang! &#128049; </span>
+                        <?php
+                            if(isset($message)){
+                                echo '<label class="text-danger">'.$message.'</label>';
+                            }
+                        ?>
                         <div class="wrap-input100 validate-input" data-validate="valid email is required: meow@paw.com">
                             <input class="input100" type="email" name="email" placeholder="Email">
                             <span class="focus-input100"></span>
@@ -75,7 +73,7 @@
                             </span>
                         </div>
                         <div class="container-login100-form-btn">
-                            <input type="submit" class="login100-form-btn" name="login" value="login">Masuk</button>
+                            <button type="submit" class="login100-form-btn" name="login" value="login">Masuk</button>
                         </div>
                         <div class="text-center p-t-12">
                             <span class="txt1">Belum memiliki akun?</span>
