@@ -137,6 +137,14 @@
             </div>
             <div class="post-description">
                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+                <div>
+                  <span class="badge badge-primary">JavaScript</span>
+                  <span class="badge badge-primary">Android</span>
+                  <span class="badge badge-primary">PHP</span>
+                  <span class="badge badge-primary">Node.js</span>
+                  <span class="badge badge-primary">Ruby</span>
+                  <span class="badge badge-primary">Paython</span>
+                </div>
                 <div class="stats">
                     <a href="#" class="btn btn-default stat-item">
                         <i class="fa fa-thumbs-up icon"></i>2
@@ -145,6 +153,7 @@
                         <i class="fa fa-share icon"></i>12
                     </a>
                 </div>
+
             </div>
             <div class="post-footer">
                 <div class="input-group">
