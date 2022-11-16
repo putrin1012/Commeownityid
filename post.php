@@ -141,6 +141,7 @@
                 <button class="btn" type="button" style="background-color:#6C452D; color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Open Adopt
                 </button>
+                
               </br></br>
                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
                 <div>

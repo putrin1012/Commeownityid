@@ -1,5 +1,6 @@
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 .panel {
@@ -49,22 +50,25 @@
 </style>
 </head>
 <body>
+
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
   <div class="container bootstrap snippets bootdeys">
       <div class="col-md-7 col-md-offset-2">
+
           <div class="panel">
 
 
-              <div class="panel-body">
+            <div class="panel-body">
               <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                   Dropdown button
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Link 1</a></li>
+                  <li><a class="dropdown-item" href="#">Link 2</a></li>
+                  <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
               </div>
             </br>
             		<textarea class="form-control" rows="2" placeholder="Write something here..."></textarea>
