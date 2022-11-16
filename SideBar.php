@@ -67,8 +67,8 @@ div.content {
   </br></br>
   <a href="Profile.php">Profile</a>
   <a href="Bookmarks.php">Bookmarks</a>
-  <a href="#news">Settings</a>
-  <a href="#about">About</a>
+  <a href="#news">About</a>
+  <a href="#about">Logout</a>
 </div>
 
 

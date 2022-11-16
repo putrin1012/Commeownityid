@@ -54,7 +54,7 @@
       <div class="col-md-7 col-md-offset-2">
           <div class="panel">
               <div class="panel-body">
-          		<textarea class="form-control" rows="2" placeholder="What are you thinking?"></textarea>
+          		<textarea class="form-control" rows="2" placeholder="Write something here..."></textarea>
           		<div class="mar-top clearfix">
               </br>
                 <?php include("tagsInput.php");?>

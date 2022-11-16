@@ -135,15 +135,14 @@
                     <h6 class="text-muted time">1 minute ago</h6>
                 </div>
             </div>
+            
             <div class="post-description">
                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
                 <div>
-                  <span class="badge badge-primary">JavaScript</span>
-                  <span class="badge badge-primary">Android</span>
-                  <span class="badge badge-primary">PHP</span>
-                  <span class="badge badge-primary">Node.js</span>
-                  <span class="badge badge-primary">Ruby</span>
-                  <span class="badge badge-primary">Paython</span>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D">Tag1</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D">Tag2</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D">Tag3</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D">Tag4</a>
                 </div>
                 <div class="stats">
                     <a href="#" class="btn btn-default stat-item">
