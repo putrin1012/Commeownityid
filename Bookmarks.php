@@ -8,8 +8,9 @@
      </div>
     <div class="col-8">
     </br></br></br>
+    <?php include("tagsInput.php");?>
+  </br>
     <?php
-        include("tagsInput.php");
         for($i = 0; $i < 10; $i++){
           include("post.php");
         ?>
