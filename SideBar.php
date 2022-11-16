@@ -5,5 +5,5 @@
   <a href="Profile.php">Profile</a>
   <a href="Bookmarks.php">Bookmarks</a>
   <a href="#news">About</a>
-  <a href="#about">Logout</a>
+  <a href="Logout.php">Logout</a>
 </div>
