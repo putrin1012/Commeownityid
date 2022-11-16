@@ -58,10 +58,15 @@
       <div class="col-md-7 col-md-offset-2">
 
           <div class="panel">
-
-
             <div class="panel-body">
-              <?php include("dropdown.php") ?>
+              <div class="dropdown">
+                <select class="btn btn-secondary dropdown-toggle" type="button" name="PostCategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Post Category">
+                <option>Kategori Post</option>
+                <option value="Open Adopt">Open Adopt</option>
+                <option value="Need Adopter">Need Adopter</option>
+                <option value="Miscellanous">Miscellanous</option>
+                </select>
+              </div>
             </br>
             		<textarea class="form-control" rows="2" placeholder="Write something here..."></textarea>
             		<div class="mar-top clearfix">
