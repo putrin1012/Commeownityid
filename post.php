@@ -135,8 +135,21 @@
                     <h6 class="text-muted time">1 minute ago</h6>
                 </div>
             </div>
+
             <div class="post-description">
+
+                <button class="btn" type="button" style="background-color:#6C452D; color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Open Adopt
+                </button>
+                
+              </br></br>
                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+                <div>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag1</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag2</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag3</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag4</a>
+                </div>
                 <div class="stats">
                     <a href="#" class="btn btn-default stat-item">
                         <i class="fa fa-thumbs-up icon"></i>2
@@ -145,6 +158,7 @@
                         <i class="fa fa-share icon"></i>12
                     </a>
                 </div>
+
             </div>
             <div class="post-footer">
                 <div class="input-group">

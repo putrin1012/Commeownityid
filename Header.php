@@ -2,15 +2,26 @@
 <html>
 <head>
 <style>
+
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 90px 10px;
+   /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+
+}
 /* Modify the background color */
 
 .navbar-custom {
     background-color: #6C452D;
+
 }
 /* Modify brand and text color */
 
 .navbar-custom .navbar-nav .nav-link {
-    color: black;
+    color: white;
 }
 </style>
 
@@ -22,7 +33,7 @@
 
 
    <div class="row">
-     <div class="col">
+     <div class="col" style="position: fixed;z-index: 99;">
 
        <nav class="navbar navbar-expand-lg navbar-custom">
          <div class="container-fluid">
@@ -53,3 +64,5 @@
       </nav>
     </div>
   </div>
+
+</br></br>

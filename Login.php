@@ -41,6 +41,16 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
+<<<<<<< HEAD
+=======
+        <div>
+            <?php
+                if (isset($_POST['login'])) {
+                    echo "Button masuk berhasil";
+                }
+            ?>
+        </div>
+>>>>>>> 9b2b3cb44412d317a4e6424636ba9b859a516a69
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
@@ -93,5 +103,3 @@
         <script src="login.js"></script>
     </body>
 </html>
-
-
