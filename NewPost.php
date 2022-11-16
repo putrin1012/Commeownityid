@@ -8,6 +8,7 @@
     border: 0;
     margin-bottom: 15px;
     background-color: white;
+    width: 1000px;
 }
 
 .panel .panel-footer, .panel>:last-child {
@@ -55,9 +56,10 @@
               <div class="panel-body">
           		<textarea class="form-control" rows="2" placeholder="What are you thinking?"></textarea>
           		<div class="mar-top clearfix">
+              </br>
                 <?php include("tagsInput.php");?>
-          			<button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
-
+              </br>
+          			<button class="btn btn-sm btn-primary pull-right" style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"><i class="fa fa-pencil fa-fw"></i> Post</button>
           			<a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#" data-original-title="Add Video" data-toggle="tooltip"></a>
           			<a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#" data-original-title="Add Photo" data-toggle="tooltip"></a>
           			<a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#" data-original-title="Add File" data-toggle="tooltip"></a>
