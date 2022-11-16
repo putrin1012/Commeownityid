@@ -48,6 +48,7 @@
     border-right-color: #f7f7f7
 }
 </style>
+
 </head>
 <body>
 
@@ -60,16 +61,7 @@
 
 
             <div class="panel-body">
-              <div class="dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Link 1</a></li>
-                  <li><a class="dropdown-item" href="#">Link 2</a></li>
-                  <li><a class="dropdown-item" href="#">Link 3</a></li>
-                </ul>
-              </div>
+              <?php include("dropdown.php") ?>
             </br>
             		<textarea class="form-control" rows="2" placeholder="Write something here..."></textarea>
             		<div class="mar-top clearfix">
