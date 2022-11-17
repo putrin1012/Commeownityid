@@ -1,3 +1,9 @@
+<?php
+include("Class/db.php");
+include("Class/post.php");
+ include("Header.php");
+ ?>
+
 <!--?php
   session_start();
   if(!isset($_SESSION['login'])){
@@ -8,12 +14,16 @@
 ?-->
 
 
-<?php
-include("Class/db.php");
-include("Class/post.php");
- include("Header.php");
- ?>
 
+
+ <?php
+
+   if($_SERVER['REQUEST_METHOD'] == "POST"){
+     //print_r($_POST);
+     $post = new Post();
+     $post->createPost($_POST);
+   }
+ ?>
 
 
    <div class="row">
