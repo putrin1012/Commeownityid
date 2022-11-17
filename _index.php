@@ -9,8 +9,8 @@
 
 
 <?php
-include("db.php");
-$posts = new database("posts");
+include("Class/db.php");
+include("Class/post.php");
  include("Header.php");
  ?>
 

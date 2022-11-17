@@ -1,7 +1,3 @@
-<?php
-
-$postData = $posts->fetch_data();
-?>
 
 
 

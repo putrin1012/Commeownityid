@@ -1,5 +1,5 @@
 
-    <form>
+  
     <div class="input-group">
       <input
         type="text"
@@ -8,4 +8,3 @@
         placeholder="Put Tags Here!"
       />
     </div>
-  </form>
