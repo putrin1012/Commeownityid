@@ -284,7 +284,7 @@ div.content {
                <a class="nav-link" href="Articles.php">Articles</a>
              </li>
                 <form class="d-flex" role="search">
-                  <a class="nav-link" href="index.php">Search</a>
+                  <a class="nav-link" href="index.php">Filter</a>
                   <input class="form-control me-2" type="search" placeholder="search here" aria-label="Search">
                 </form>
 
