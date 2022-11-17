@@ -31,7 +31,9 @@
                 </div>
 
               <a href="articlePage.php" style="font-size:40px;text-decoration:none;color:#6C452D;">Article Title</a>
-
+            </br>
+              <span class="text-muted time">18 November 2022</span>
+              </br></br>
                 <p><?php //echo $data['textContent']??''; ?>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo lorem maximus quam malesuada ultrices. Etiam velit urna, ultrices at nisi non, pharetra efficitur nulla. Nullam sit amet accumsan nibh. Cras vulputate nisl purus, lacinia pharetra urna bibendum tempus. Morbi gravida orci in dapibus imperdiet. Donec turpis odio, ultrices a varius non, volutpat sit amet ante. Sed consectetur vel dolor eget consequat. Vestibulum convallis dui in molestie congue. Integer aliquam scelerisque sem, in sodales massa congue vitae. Integer posuere lacinia ligula, sit amet volutpat dui vehicula quis. Duis elit mauris, lobortis nec venenatis ut, sollicitudin ac lacus. Etiam neque massa, pharetra vel erat eget, laoreet euismod lacus. Morbi id condimentum purus. Etiam a urna et orci dapibus facilisis. Nam fringilla eleifend erat sed ultricies. Duis sed erat sed felis commodo aliquet.
                 </br></br>

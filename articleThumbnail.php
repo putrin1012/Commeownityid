@@ -19,7 +19,9 @@
                 </div>
 
               <a href="articlePage.php" style="font-size:40px;text-decoration:none;color:#6C452D;">Article Title</a>
-
+            </br>
+              <span class="text-muted time">18 November 2022</span>
+              </br>
                 <p><?php //echo $data['textContent']??''; ?>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu nunc, tempus et rhoncus ut, porta ac tellus. Curabitur a purus congue mi blandit pretium vitae et felis. Vivamus tempor convallis ante a ullamcorper. Nunc hendrerit est urna, ut rhoncus nulla tincidunt a. Aenean feugiat porta nulla efficitur dapibus. Quisque et posuere arcu. In hac habitasse platea dic<a href="articlePage.php"> Read More...</a></p>
 
                 <div class="stats">
