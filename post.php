@@ -24,27 +24,31 @@
                 <button class="btn" type="button" style="background-color:#6C452D; color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Open Adopt
                 </button>
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" src="img/tesCarousel.jpg" alt="First slide">
+                      <img src="img/tesCarousel.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="img/tesCarousel_2.jpg" alt="Second slide">
+                      <img src="img/tesCarousel_2.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="img/tesCarousel_3.jpg" alt="Third slide">
+                      <img src="img/tesCarousel_3.jpg" class="d-block w-100" alt="...">
                     </div>
                   </div>
-                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+                    <span class="visually-hidden">Next</span>
+                  </button>
               </br></br>
                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
                 <div>
