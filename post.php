@@ -21,7 +21,7 @@
 
             <div class="post-description">
 
-                <button class="btn" type="button" style="background-color:#6C452D; color:white;"> 
+                <button class="btn" type="button" style="background-color:#6C452D; color:white;">
                   Open Adopt
                 </button>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -32,13 +32,13 @@
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="img/tesCarousel.jpg" class="d-block w-100" alt="...">
+                      <img src="img/tesCarousel.jpg" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                     <div class="carousel-item">
-                      <img src="img/tesCarousel_2.jpg" class="d-block w-100" alt="...">
+                      <img src="img/tesCarousel_2.jpg" class="d-block w-100" alt="..."style="width:640px;height:360px">
                     </div>
                     <div class="carousel-item">
-                      <img src="img/tesCarousel_3.jpg" class="d-block w-100" alt="...">
+                      <img src="img/tesCarousel_3.jpg" class="d-block w-100" alt="..."style="width:640px;height:360px">
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -49,7 +49,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
-              </br></br>
+              </br>
                 <p>Open Adopt panda laut</p>
                 <div>
                   <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag1</a>
@@ -86,32 +86,7 @@
                             </div>
                             <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
                         </div>
-                        <ul class="comments-list">
-                            <li class="comment">
-                                <a class="pull-left" href="#">
-                                    <img class="avatar" src="https://bootdey.com/img/Content/user_3.jpg" alt="avatar">
-                                </a>
-                                <div class="comment-body">
-                                    <div class="comment-heading">
-                                        <h4 class="user">Ryan Haywood</h4>
-                                        <h5 class="time">3 minutes ago</h5>
-                                    </div>
-                                    <p>Relax my friend</p>
-                                </div>
-                            </li>
-                            <li class="comment">
-                                <a class="pull-left" href="#">
-                                    <img class="avatar" src="https://bootdey.com/img/Content/user_2.jpg" alt="avatar">
-                                </a>
-                                <div class="comment-body">
-                                    <div class="comment-heading">
-                                        <h4 class="user">Gavino Free</h4>
-                                        <h5 class="time">3 minutes ago</h5>
-                                    </div>
-                                    <p>Ok, cool.</p>
-                                </div>
-                            </li>
-                        </ul>
+
                     </li>
                 </ul>
             </div>
