@@ -21,7 +21,7 @@
 
             <div class="post-description">
 
-                <button class="btn" type="button" style="background-color:#6C452D; color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn" type="button" style="background-color:#6C452D; color:white;"> 
                   Open Adopt
                 </button>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -50,7 +50,7 @@
                     <span class="visually-hidden">Next</span>
                   </button>
               </br></br>
-                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+                <p>Open Adopt panda laut</p>
                 <div>
                   <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag1</a>
                   <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag2</a>
