@@ -49,7 +49,7 @@
                     <span class="visually-hidden">Next</span>
                   </button>
               </br>
-                <p><?php echo $data['textContent']??''; ?></p>
+                <p><?php //echo $data['textContent']??''; ?>Open adopt panda laut</p>
                 <div>
                   <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag1</a>
                   <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag2</a>
@@ -63,6 +63,9 @@
                     <a href="#" class="btn btn-default stat-item">
                         <i class="fa fa-share icon"></i>12
                     </a>
+                    <a href="#" class="btn btn-default stat-item">
+                        <i class="fa fa-bookmark icon"></i>
+                    </a>
                 </div>
 
             </div>
@@ -70,7 +73,7 @@
                 <div class="input-group">
                     <input class="form-control" placeholder="Add a comment" type="text">
                     <span class="input-group-addon">
-                        <a href="#"><i class="fa fa-edit"></i></a>
+                        <a href="#"> <i class="fa fa-edit"></i></a>
                     </span>
                 </div>
                 <ul class="comments-list">
