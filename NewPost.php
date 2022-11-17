@@ -1,10 +1,3 @@
-<?php
-
-  if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $post = new Post();
-    $post->createPost($_POST);
-  }
-?>
 
 <div class="container bootstrap snippets bootdeys">
       <div class="col-md-7 col-md-offset-2">

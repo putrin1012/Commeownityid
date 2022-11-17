@@ -8,11 +8,9 @@
      </div>
     <div class="col-8">
     </br>
-        <?php
-        include("NewPost.php");
-        ?></br></br><?php
+</br></br><?php
         for($i = 0; $i < 10; $i++){
-          include("post.php");
+          include("articleThumbnail.php");
         ?>
       </br>
       <?php
