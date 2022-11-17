@@ -7,7 +7,10 @@
   }
 ?-->
 
+
 <?php
+include("db.php");
+$posts = new database("posts");
  include("Header.php");
  ?>
 

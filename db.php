@@ -70,3 +70,6 @@ class database {
   }
 
 }
+
+$posts = new database("posts");
+?>
