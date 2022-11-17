@@ -24,6 +24,27 @@
                 <button class="btn" type="button" style="background-color:#6C452D; color:white;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Open Adopt
                 </button>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="img/tesCarousel.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="img/tesCarousel_2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="img/tesCarousel_3.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
               </br></br>
                 <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
                 <div>

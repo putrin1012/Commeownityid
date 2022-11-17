@@ -1,15 +1,17 @@
-<?php
- include("Header.php");
- ?>
-
-<?php
+<!--?php
   session_start();
   if(!isset($_SESSION['login'])){
     header("Location: Login.php");
   }else{
     echo "<script>alert('Selamat datang! :3');</script>";
   }
-?>
+?-->
+
+<?php
+ include("Header.php");
+ ?>
+
+
 
    <div class="row">
      <div class="col-2">

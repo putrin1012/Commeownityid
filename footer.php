@@ -12,6 +12,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="bootstrap-tagsinput.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 2000
+    })
+  });
+</script>
 <script>
   $(function () {
     $('input')
