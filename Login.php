@@ -17,7 +17,7 @@
                 $count = $statement->rowCount();
                 if($count > 0){
                     $_SESSION["login"] = $_POST["email"];
-                    header("Location: _index.php");
+                    echo "<script type='text/javascript'>alert('Selamat datang! :3');location='_index.php';</script>";
                 }else{
                     $message = '<label>Email atau Password salah.</label>';
                 }

@@ -17,7 +17,7 @@
                 </br>
                   <?php include("tagsInput.php");?>
                 </br>
-                <button class="btn btn-sm btn-primary pull-right" style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"><i class="fa fa-search fa-fw"></i> Search</button>
+                <button class="btn btn-sm btn-primary pull-right" style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"><i class="fa fa-search fa-fw"></i> Post</button>
             
                   <label>
                     <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" data-original-title="Add Video" data-toggle="tooltip"></a>

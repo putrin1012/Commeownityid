@@ -1,19 +1,12 @@
 <?php
- include("Header.php");
+//  include("Header.php");
+ include("New_header.html");
  ?>
 
-<?php
-  session_start();
-  if(!isset($_SESSION['login'])){
-    header("Location: Login.php");
-  }else{
-    echo "<script>alert('Selamat datang! :3');</script>";
-  }
-?>
 
    <div class="row">
      <div class="col-2">
-       <?php include("Sidebar.php");?>
+       <?php include("Sidebar.html");?>
      </div>
     <div class="col-8">
     </br>

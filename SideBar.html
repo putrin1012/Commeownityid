@@ -1,0 +1,80 @@
+<!-- <div class="sidebar">
+  </br>
+  <img src="img/Untitled271.jpg" style="width: 75px;margin-left: 55px;border: solid;border-radius:50%;">
+  </br></br>
+  <a href="Profile.php">Profile</a>
+  <a href="Bookmarks.php">Bookmarks</a>
+  <a href="#news">About</a>
+  <a href="Logout.php">Logout</a>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .sideNav {
+                height: 100%;
+                width: 200px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #555;
+                overflow-x: hidden;
+                padding-top: 90px;
+                transition: 0.5s;
+                /* display: contents; */
+            }
+
+            .sideNav a {
+                padding: 10px 10px 10px 32 px;
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                display: block;
+                transition: 0.3s;
+                justify-content: space-between;
+                padding: 5px 14px;
+            }
+
+            .sideNav a:hover {
+                color: #f1f1f1;
+            }
+
+            .Logout {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sideNav{padding-top: 15px;}
+                .sideNav a {font-size: 18px;}
+            }
+        </style>
+    </head>
+    <body>
+        <div outerNavbar style="top: 90px;">
+            <div id="sideNav" class="sideNav">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+                <img src="img/Untitled271.jpg" style="width: 85px;margin-left: 55px;border: solid;border-radius:50%;">
+                <br><br>
+                <a href="Profile.php">Profile</a>
+                <a href="Bookmark.php">Bookmark</a>
+                <a href="#">About</a>
+                <a class="Logout" href="Logout.php">Logout</a>
+        </div>
+        </div>
+        
+        <!-- <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span> -->
+
+        <script>
+            function openNav() {
+                document.getElementById("sideNav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("sideNav").style.width = "0";
+            }
+        </script>
+    </body>
+</html>
+
