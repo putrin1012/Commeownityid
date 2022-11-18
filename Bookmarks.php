@@ -1,5 +1,5 @@
 <?php
- include("Header.php");
+ include("New_header.html");
  ?>
 
    <div class="row">
@@ -7,9 +7,12 @@
        <?php include("Sidebar.php");?>
      </div>
     <div class="col-8">
-    </br></br></br>
+    </br></br></br></br>
     <div class="col" style="margin-left:25px;width:1020px;">
-      <?php include("tagsInput.php");?>
+      <form class="d-flex" role="search">
+
+          <input class="form-control me-2"  type="search" placeholder="search here" aria-label="Search">
+      </form>
       </br>
       <button class="btn btn-sm btn-primary pull-right" style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"><i class="fa fa-search fa-fw"></i> Search</button>
     </div>

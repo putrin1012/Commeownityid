@@ -1,11 +1,11 @@
 <?php
-//  include("Header.php");
+//include("Header.php");
  include("New_header.html");
  ?>
 
-include("Class/db.php");
+<?php include("Class/db.php");
 include("Class/post.php");
- <!-- include("Header.php"); -->
+ //include("Header.php");
  ?>
 
 <!--?php    (Pindah ke Login )
@@ -32,10 +32,10 @@ include("Class/post.php");
 
    <div class="row">
      <div class="col-2">
-       <?php include("Sidebar.html");?>
+       <?php include("Sidebar.php");?>
      </div>
     <div class="col-8">
-    </br>
+    </br></br></br></br>
         <?php
         include("NewPost.php");
         ?></br></br><?php
