@@ -3,6 +3,32 @@
  include("New_header.html");
  ?>
 
+include("Class/db.php");
+include("Class/post.php");
+ <!-- include("Header.php"); -->
+ ?>
+
+<!--?php    (Pindah ke Login )
+  session_start();
+  if(!isset($_SESSION['login'])){
+    header("Location: Login.php");
+  }else{
+    echo "<script>alert('Selamat datang! :3');</script>";
+  }
+?-->
+
+
+
+
+ <?php
+
+   if($_SERVER['REQUEST_METHOD'] == "POST"){
+     //print_r($_POST);
+     $post = new Post();
+     $post->createPost($_POST);
+   }
+ ?>
+
 
    <div class="row">
      <div class="col-2">

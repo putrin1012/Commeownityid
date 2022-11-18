@@ -13,6 +13,13 @@
 
 <script src="bootstrap-tagsinput.js"></script>
 <script>
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 2000
+    })
+  });
+</script>
+<script>
   $(function () {
     $('input')
       .on('change', function (event) {
