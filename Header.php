@@ -285,6 +285,8 @@ div.content {
              <li class="nav-item">
                <a class="nav-link" href="Articles.php">Articles</a>
              </li>
+
+             <div class="col" style="max-width:1000px;">
                 <div class="form-group" role="search">
                   <input
                   class="form-control me-2"
@@ -292,9 +294,10 @@ div.content {
                   data-role="tagsinput"
                   placeholder="Search here"
                   aria-label="Search"
-                  style="width:100px;"/>
+                  style="width:100px !important;"/>
                 </div>
                 <!--a class="nav-link" href="index.php"><i class="fa fa-filter add-tooltip"></i>  Filter </a-->
+              </div>
             </ul>
           </div>
       </nav>
