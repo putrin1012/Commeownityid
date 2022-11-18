@@ -1,10 +1,14 @@
 <?php
-include("Class/db.php");
-include("Class/post.php");
- include("Header.php");
+//  include("Header.php");
+ include("New_header.html");
  ?>
 
-<!--?php
+include("Class/db.php");
+include("Class/post.php");
+ <!-- include("Header.php"); -->
+ ?>
+
+<!--?php    (Pindah ke Login )
   session_start();
   if(!isset($_SESSION['login'])){
     header("Location: Login.php");
@@ -28,7 +32,7 @@ include("Class/post.php");
 
    <div class="row">
      <div class="col-2">
-       <?php include("Sidebar.php");?>
+       <?php include("Sidebar.html");?>
      </div>
     <div class="col-8">
     </br>

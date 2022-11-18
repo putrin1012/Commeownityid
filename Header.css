@@ -1,0 +1,269 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css");
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #6C452D;
+    color: #f1f1f1;
+    z-index: 99;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* NAVBAR MENUS */
+.Menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.Menu li:hover {
+    background-color: #754223;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.Menu li {
+    margin-top: 11px;
+    padding: 5px 14px;
+    text-align: center;
+    /* bottom: ; */
+}
+
+.form-control {
+    margin-top: 11px;
+    padding: 5px 14px;
+}
+
+
+/* POST & TIMELINE STYLING */
+.panel {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.075);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 15px;
+    background-color: white;
+    padding-top: 15px;
+    margin-top: 15px;
+    width: 1000px;
+}
+
+.panel .panel-footer, .panel>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.panel .panel-heading, .panel>:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.panel-body {
+    padding: 25px 20px;
+}
+.panel .timeline,
+.panel .timeline-time {
+    background-color: #fff
+}
+
+.panel .timeline-icon {
+    box-shadow: 0 0 0 7px #fff
+}
+
+.panel .timeline-label {
+    box-shadow: none;
+    background-color: #f7f7f7;
+    border: 1px solid #e3e3e3
+}
+
+.panel .timeline-label:before {
+    border-right-color: #e3e3e3
+}
+
+.panel .timeline-label:after {
+    border-right-color: #f7f7f7
+}
+
+
+  .panel-shadow {
+      box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+  }
+  .panel-white {
+    border: 1px solid #dddddd;
+  }
+  .panel-white  .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+  }
+  .panel-white  .panel-footer {
+    background-color: #fff;
+    border-color: #ddd;
+  }
+
+  .post .post-heading {
+    height: 95px;
+    padding: 20px 15px;
+
+  }
+  .post .post-heading .avatar {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: 15px;
+
+  }
+  .post .post-heading .meta .title {
+    margin-bottom: 0;
+
+  }
+  .post .post-heading .meta .title a {
+    color: black;
+  }
+  .post .post-heading .meta .title a:hover {
+    color: #aaaaaa;
+  }
+  .post .post-heading .meta .time {
+    margin-top: 8px;
+    color: #999;
+  }
+  .post .post-image .image {
+    width: 100%;
+    height: auto;
+
+  }
+  .post .post-description {
+    padding: 15px;
+
+  }
+  .post .post-description p {
+    font-size: 14px;
+
+  }
+  .post .post-description .stats {
+    margin-top: 20px;
+
+  }
+  .post .post-description .stats .stat-item {
+    display: inline-block;
+    margin-right: 15px;
+
+  }
+  .post .post-description .stats .stat-item .icon {
+    margin-right: 8px;
+  }
+  .post .post-footer {
+    border-top: 1px solid #ddd;
+    padding: 15px;
+  }
+  .post .post-footer .input-group-addon a {
+    color: #454545;
+  }
+  .post .post-footer .comments-list {
+    padding: 0;
+    margin-top: 20px;
+    list-style-type: none;
+  }
+  .post .post-footer .comments-list .comment {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .post .post-footer .comments-list .comment .avatar {
+    width: 35px;
+    height: 35px;
+  }
+  .post .post-footer .comments-list .comment .comment-heading {
+    display: block;
+    width: 100%;
+  }
+  .post .post-footer .comments-list .comment .comment-heading .user {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline;
+    margin-top: 0;
+    margin-right: 10px;
+  }
+  .post .post-footer .comments-list .comment .comment-heading .time {
+    font-size: 12px;
+    color: #;
+    margin-top: 0;
+    display: inline;
+  }
+  .post .post-footer .comments-list .comment .comment-body {
+    margin-left: 50px;
+  }
+  .post .post-footer .comments-list .comment > .comments-list {
+    margin-left: 50px;
+  }
+  .bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white !important;
+    background-color: #6C452D;
+    padding: 0.2rem;
+  }
+
+
+/* SIDE NAV */
+/* .sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #555;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+} */
+
+/* .sideNav a {
+    padding: 8px 8px 8px 32 px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+} */
+
+/* .sideNav a:hover {
+    color: #f1f1f1;
+} */
+
+/* .sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
+
+/* @media screen and (max-height: 450px) {
+    .sideNav{padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+} */

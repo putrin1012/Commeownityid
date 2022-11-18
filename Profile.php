@@ -1,11 +1,11 @@
 <?php
-
- include("Header.php");
+//  include("Header.php");
+ include("New_header.html");
  ?>
 
    <div class="row">
      <div class="col-2">
-       <?php include("Sidebar.php");?>
+       <?php include("Sidebar.html");?>
      </div>
     <div class="col-10">
       </br>
