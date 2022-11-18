@@ -40,22 +40,22 @@
                       <img src="img/tesCarousel_3.jpg" class="d-block w-100" alt="..."style="width:640px;height:360px">
                     </div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <!--button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                  </button>
+                  </button-->
               </br>
                 <p><?php //echo $data['textContent']??''; ?>Open adopt panda laut</p>
-                <div>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag1</a>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag2</a>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag3</a>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;">Tag4</a>
-                </div>
+                <!--div-->
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag1</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag2</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag3</a>
+                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag4</a>
+                <!--/div-->
                 <div class="stats">
                     <a href="#" class="btn btn-default stat-item">
                         <i class="fa fa-thumbs-up icon"></i>2

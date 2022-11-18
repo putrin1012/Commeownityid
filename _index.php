@@ -8,14 +8,14 @@ include("Class/post.php");
  //include("Header.php");
  ?>
 
-<!--?php    (Pindah ke Login )
+<?php
   session_start();
   if(!isset($_SESSION['login'])){
     header("Location: Login.php");
   }else{
     echo "<script>alert('Selamat datang! :3');</script>";
   }
-?-->
+?>
 
 
 
