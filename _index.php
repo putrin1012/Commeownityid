@@ -3,7 +3,7 @@
  include("New_header.html");
  ?>
 
-include("Class/db.php");
+ include("Class/db.php");
 include("Class/post.php");
  <!-- include("Header.php"); -->
  ?>
