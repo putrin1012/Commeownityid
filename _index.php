@@ -14,7 +14,14 @@ include("Class/post.php");
     header("Location: Login.php");
   }else{
     echo "<script>alert('Selamat datang! :3');</script>";
+
   }
+
+  //printr($_SESSION['ID']);
+  //collect posts
+  $post = new Post();
+  $location = "Bekasi";
+  $posts = $post->getPostTimeline($location);
 ?>
 
 
