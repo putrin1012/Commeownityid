@@ -1,27 +1,35 @@
 <?php
 //include("Header.php");
+
  include("New_header.html");
+
  ?>
 
 <?php include("Class/db.php");
 include("Class/post.php");
+include("Class/User.php");
  //include("Header.php");
  ?>
 
 <?php
   session_start();
+  //print_r($_SESSION);
   if(!isset($_SESSION['login'])){
     header("Location: Login.php");
-  }else{
-    echo "<script>alert('Selamat datang! :3');</script>";
-
   }
 
-  //printr($_SESSION['ID']);
+
   //collect posts
+
   $post = new Post();
-  $location = "Bekasi";
+  $DB = new database();
+  $userID = $_SESSION["ID"];
+  $Locationquery = "SELECT Location FROM users WHERE ID='$userID'";
+  $result = $DB->read($Locationquery);
+
+  $location = $result[0]['Location'];
   $posts = $post->getPostTimeline($location);
+  //print_r($posts);
 ?>
 
 
@@ -46,12 +54,20 @@ include("Class/post.php");
         <?php
         include("NewPost.php");
         ?></br></br><?php
-        for($i = 0; $i < 10; $i++){
-          include("post.php");
+        if($posts){
+          foreach($posts as $row){
+            $user = new User();
+            $row_user = $user->getData($row['UserID']);
+
+            include("post.php");
+
+          }
+        }
+
         ?>
       </br>
       <?php
-        }
+
         ?>
 
       </div>

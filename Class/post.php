@@ -15,12 +15,14 @@ class Post {
     return $this->error;
   }
 
-  public getPostTimeline($location){
+  public function getPostTimeline($location){
     $query = "SELECT * FROM posts WHERE location = '$location' ORDER BY dateTimeCreated";
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {
       return $result;
+    } else {
+      return false;
     }
   }
 

@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once('config.php');
+    include("Class/db.php");
 ?>
 
 <?php
@@ -10,13 +11,23 @@
             if(empty($_POST["email"]) || empty($_POST["password"])){
                 $message = '<label>Email dan Password tidak boleh kosong!</label>';
             }else{
-                $query = "SELECT * FROM users WHERE Email = :email AND Password = :password";
+                $query = "SELECT * FROM users WHERE Email = :email AND Password = :password LIMIT 1";
+                $email = $_POST["email"];
+                $password = $_POST["password"];
+                $queryID = "SELECT * FROM users WHERE Email = '$email' AND Password = '$password' LIMIT 1";
                 $statement = $conn->prepare($query);
                 $statement->execute(array('email'=>$_POST["email"], 'password'=>$_POST["password"]));
+                $DB = new database();
+                $id = $DB->read($queryID);
+
 
                 $count = $statement->rowCount();
                 if($count > 0){
                     $_SESSION["login"] = $_POST["email"];
+                    $_SESSION["ID"] = $id[0]['ID'];
+                    //print_r($DB->read($queryID));
+                    print_r($_SESSION);
+
                     echo "<script type='text/javascript'>alert('Selamat datang! :3');location='_index.php';</script>";
                 }else{
                     $message = '<label>Email atau Password salah.</label>';
@@ -26,7 +37,7 @@
     }catch(PDOException $error){
         $message = $error->getMessage();
     }
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +59,7 @@
                     <div class="login100-pic js-tilt" data-tilt>
                                 <img src="img/logo_dark.png" alt="IMG">
                     </div>
-                    
+
                     <form class="login100-form validate-form" action="" method="post">
                         <span class="login100-form-title"> Selamat Datang! &#128049; </span>
                         <?php
