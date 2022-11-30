@@ -61,13 +61,13 @@ include("Class/User.php");
 
             include("post.php");
 
-          }
-        }
+
 
         ?>
       </br>
       <?php
-
+      }
+    }
         ?>
 
       </div>
