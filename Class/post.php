@@ -15,7 +15,13 @@ class Post {
     return $this->error;
   }
 
-  private function createPostID(){
-
+  public getPostTimeline($location){
+    $query = "SELECT * FROM posts WHERE location = '$location' ORDER BY dateTimeCreated";
+    $DB = new database();
+    $result = $DB->read($query);
+    if (!empty($result)) {
+      return $result;
+    }
   }
+
 }

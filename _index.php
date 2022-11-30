@@ -1,21 +1,28 @@
 <?php
-//  include("Header.php");
+//include("Header.php");
  include("New_header.html");
  ?>
 
- include("Class/db.php");
+<?php include("Class/db.php");
 include("Class/post.php");
- <!-- include("Header.php"); -->
+ //include("Header.php");
  ?>
 
-<!--?php    (Pindah ke Login )
+<?php
   session_start();
   if(!isset($_SESSION['login'])){
     header("Location: Login.php");
   }else{
     echo "<script>alert('Selamat datang! :3');</script>";
+
   }
-?-->
+
+  //printr($_SESSION['ID']);
+  //collect posts
+  $post = new Post();
+  $location = "Bekasi";
+  $posts = $post->getPostTimeline($location);
+?>
 
 
 
@@ -32,10 +39,10 @@ include("Class/post.php");
 
    <div class="row">
      <div class="col-2">
-       <?php include("Sidebar.html");?>
+       <?php include("Sidebar.php");?>
      </div>
     <div class="col-8">
-    </br>
+    </br></br></br></br>
         <?php
         include("NewPost.php");
         ?></br></br><?php

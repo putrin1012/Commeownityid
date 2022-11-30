@@ -5,10 +5,10 @@
 
    <div class="row">
      <div class="col-2">
-       <?php include("Sidebar.html");?>
+       <?php include("Sidebar.php");?>
      </div>
     <div class="col-10">
-      </br>
+      </br></br></br></br></br>
         <?php include("userInfo.php"); ?>
       </br>
 

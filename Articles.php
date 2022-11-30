@@ -1,5 +1,5 @@
 <?php
- include("Header.php");
+ include("New_header.html");
  ?>
 
    <div class="row">
@@ -8,7 +8,7 @@
      </div>
     <div class="col-8">
     </br>
-</br></br><?php
+</br></br></br><?php
         for($i = 0; $i < 10; $i++){
           include("articleThumbnail.php");
         ?>

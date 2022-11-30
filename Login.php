@@ -10,13 +10,15 @@
             if(empty($_POST["email"]) || empty($_POST["password"])){
                 $message = '<label>Email dan Password tidak boleh kosong!</label>';
             }else{
+                $id = "SELECT UserID FROM users WHERE Email = :email AND Password = :password";
                 $query = "SELECT * FROM users WHERE Email = :email AND Password = :password";
                 $statement = $conn->prepare($query);
                 $statement->execute(array('email'=>$_POST["email"], 'password'=>$_POST["password"]));
 
                 $count = $statement->rowCount();
                 if($count > 0){
-                    $_SESSION["login"] = $_POST["email"];
+                    $_SESSION["login"] = $id
+                    // $_SESSION["login"] = $_POST["email"];
                     echo "<script type='text/javascript'>alert('Selamat datang! :3');location='_index.php';</script>";
                 }else{
                     $message = '<label>Email atau Password salah.</label>';

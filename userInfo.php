@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<head>
-<style>
-    a {
-        color: black;
-    }
-</style>
 
-<section class="bg-light">
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="col">
                 <div class="card card-style1 border-0">
                     <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
                         <div class="row align-items-center">
                             <div class="col-lg-6 mb-4 mb-lg-0">
-                                <img src="img/Untitled271.jpg" alt="..." style="width: 250px;margin-left: 55px;border: solid;border-radius:50%;">
+                                <img src="img/user.png" alt="..." style="width: 250px;margin-left: 55px;border: solid;border-radius:50%;">
                             </div>
                             <div class="col-lg-6 px-xl-10">
-                          
+
                                     <h3 class="h2 text-white mb-0">John mark Doe Kyzer</h3>
 
                                 <ul class="list-unstyled mb-1-9">
@@ -42,4 +36,3 @@
 
         </div>
     </div>
-</section>
