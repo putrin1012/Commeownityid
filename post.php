@@ -11,10 +11,10 @@
                 </div>
                 <div class="pull-left meta">
                     <div class="title h5">
-                        <a href="#"><b><?php //echo $data['UserID']??'';?>Username</b></a>
+                        <a href="#"><b><?php echo $row_user['userName']??'';?></b></a>
                         made a post.
                     </div>
-                    <!--h6 class="text-muted time">1 minute ago</h6-->
+                    <h6 class="text-muted time"><?php echo $row['dateTimeCreated']??'';?></h6>
                 </div>
             </div>
 
