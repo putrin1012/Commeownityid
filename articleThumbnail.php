@@ -12,17 +12,23 @@
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="img/tesCarousel.jpg" class="d-block w-100" alt="..." style="width:640px;height:360px">
+                      <!-- update --- load blob image from database-->
+                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['CoverPic']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
 
                   </div>
                 </div>
 
-              <a href="articlePage.php" style="font-size:40px;text-decoration:none;color:#6C452D;">Article Title</a>
+                <!-- update --- load article title --- -->
+              <a href="articlePage.php" style="font-size:40px;text-decoration:none;color:#6C452D;"><?= $row['ArticleTitle']??'' ?></a>
             </br>
-              <span class="text-muted time">18 November 2022</span>
+            <!-- update --- load article datetime --- -->
+              <span class="text-muted time"><?= (new DateTime($row['DatePosted']))->format("D, d M Y"); ?></span>
               </br>
-                <p><?php //echo $data['textContent']??''; ?>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu nunc, tempus et rhoncus ut, porta ac tellus. Curabitur a purus congue mi blandit pretium vitae et felis. Vivamus tempor convallis ante a ullamcorper. Nunc hendrerit est urna, ut rhoncus nulla tincidunt a. Aenean feugiat porta nulla efficitur dapibus. Quisque et posuere arcu. In hac habitasse platea dic<a href="articlePage.php"> Read More...</a></p>
+              <!-- update --- set href to articleDetail --- -->
+              <!-- update --- substring textContent to 250 chars -->
+              <!-- update --- add query params on the url to article details, the id refers to article id -->
+                <p><?php echo substr($row['TextContent']??'',0,250); ?><a href="articleDetail.php?id=<?= $row['ArticleID']?>"> Read More...</a></p>
 
                 <div class="stats">
                     <a href="#" class="btn btn-default stat-item">
