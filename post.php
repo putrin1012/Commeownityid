@@ -31,13 +31,13 @@
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="img/tesCarousel.jpg" class="d-block w-100" alt="..." style="width:640px;height:360px">
+                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                     <div class="carousel-item">
-                      <img src="img/tesCarousel_2.jpg" class="d-block w-100" alt="..."style="width:640px;height:360px">
+                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent2']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                     <div class="carousel-item">
-                      <img src="img/tesCarousel_3.jpg" class="d-block w-100" alt="..."style="width:640px;height:360px">
+                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent3']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                   </div>
                   <!--button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
