@@ -15,12 +15,25 @@ class Post {
     return $this->error;
   }
 
-  public getPostTimeline($location){
-    $query = "SELECT * FROM posts WHERE location = '$location' ORDER BY dateTimeCreated";
+  public function getPostTimeline($location){
+    $query = "SELECT * FROM posts WHERE location = '$location' ORDER BY dateTimeCreated DESC";
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {
       return $result;
+    } else {
+      return false;
+    }
+  }
+
+  public function getPostProfile($id) {
+    $query = "SELECT * FROM posts WHERE id = '$id' ORDER BY dateTimeCreated";
+    $DB = new database();
+    $result = $DB->read($query);
+    if (!empty($result)) {
+      return $result;
+    } else {
+      return false;
     }
   }
 
