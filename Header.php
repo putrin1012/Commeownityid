@@ -284,7 +284,8 @@ div.content {
                <a class="nav-link" href="_index.php">Home</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="Articles.php">Articles</a>
+               <!-- update --- chnage href to ArticlesPage ---- -->
+               <a class="nav-link" href="ArticlesPage.php">Articles</a>
              </li>
 
              <div class="col" style="max-width:1000px;">
