@@ -1,9 +1,9 @@
 <?php
     require_once('config.php');
-    include("Class\db.php");
+    // include("Class\db.php");
 ?>
 <?php
-    $DB = new database();
+    // $DB = new database();
     if (isset($_POST['register'])) {
         $userName = $_POST['username'];
         $Email = $_POST['Email'];
@@ -23,7 +23,7 @@
             echo '<p class="error">Alamat email sudah terdaftar!</p>';
         }else {
 
-            /*$sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
+            $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
 
             $stmtinsert = $conn->prepare($sql);
             $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
@@ -31,16 +31,16 @@
                 echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
             } else {
                 echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
-            }*/
-            $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES('$userName', '$Email', '$Location', '$Password')";
-            $result = $DB->save($sql);
-            if ($result) {
-                echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
-                header("Location: login.php");
-                die;
-            } else {
-                echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
             }
+            // $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES('$userName', '$Email', '$Location', '$Password')";
+            // $result = $DB->save($sql);
+            // if ($result) {
+            //     echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
+            //     header("Location: login.php");
+            //     die;
+            // } else {
+            //     echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
+            // }
         }
     }
 ?>
