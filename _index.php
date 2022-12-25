@@ -7,6 +7,7 @@
 
 <?php include("Class/db.php");
 include("Class/post.php");
+
 include("Class/User.php");
  //include("Header.php");
  ?>

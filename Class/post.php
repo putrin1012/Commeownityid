@@ -27,7 +27,8 @@ class Post {
   }
 
   public function getPostProfile($id) {
-    $query = "SELECT * FROM posts WHERE id = '$id' ORDER BY dateTimeCreated";
+    // update --- change id to UserID in the query -----
+    $query = "SELECT * FROM posts WHERE UserID = '$id' ORDER BY dateTimeCreated";
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {
