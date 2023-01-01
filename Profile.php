@@ -1,5 +1,6 @@
 <?php
 //  include("Header.php");
+ include("session.php");
  include("New_header.html");
  include("Class/db.php");
  include("Class/post.php");
@@ -27,7 +28,9 @@ $posts = $post->getPostProfile($userID);
         <?php include("userInfo.php"); ?>
       </br>
 
-      <?php include("NewPost.php");
+      <?php
+      include("NewPost.php");
+
 
         ?></br><?php
         if($posts){

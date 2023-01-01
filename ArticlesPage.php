@@ -1,4 +1,5 @@
 <?php
+include("session.php");
 include("New_header.html");
 
 // update --- add db, article class ---
@@ -6,10 +7,10 @@ include("Class/db.php");
 include("Class/Article.php");
 
 // update --- check login session ---
-session_start();
+/*session_start();
 if (!isset($_SESSION['login'])) {
   header("Location: Login.php");
-}
+}*/
 
 // update --- get all articles from database ---
 $article = new Article();
