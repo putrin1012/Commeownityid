@@ -31,7 +31,7 @@
                                     </div>
                                     <strong>HoomanCAT</strong>
                                     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Username:</span>Soma Kyo</li>
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>Jawa Barat</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>Bandung</li>
                                         <!-- <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> edith@mail.com</li> -->
                                     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Kontak:</span> <a href="wa.me/" style="font-color='black';"> Whatsapp (Kyo)</span></li>
                                         <!-- <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> 507 - 541 - 4567</li> -->   
