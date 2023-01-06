@@ -15,12 +15,13 @@ class database {
 
   function read($query) {
     $conn = $this->connect();
-    $result = $conn->query($query);;
+    $result = mysqli_query($conn, $query);
 
     if(!$result){
       //return false;
       return $result;
     } else {
+      $data = false;
       while($row = mysqli_fetch_assoc($result)){
         $data[] = $row;
       }
