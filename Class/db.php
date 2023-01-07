@@ -16,7 +16,6 @@ class database {
   function read($query) {
     $conn = $this->connect();
     $result = $conn->query($query);;
-    
 
     if(!$result){
       //return false;
