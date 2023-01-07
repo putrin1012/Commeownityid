@@ -15,7 +15,7 @@ class database {
 
   function read($query) {
     $conn = $this->connect();
-    $result = mysqli_query($conn, $query);
+    $result = $conn->query($query);;
 
     if(!$result){
       //return false;
