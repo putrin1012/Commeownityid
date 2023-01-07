@@ -21,7 +21,7 @@
             <div class="post-description">
 
                 <button class="btn" type="button" style="background-color:#6C452D; color:white;">
-                  <?php echo $row['Type']??''; ?>
+                  <?php echo $row['postCategory']??''; ?>
                 </button>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                   <div class="carousel-indicators">
@@ -30,15 +30,27 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   </div>
                   <div class="carousel-inner">
+                    <?php if(!empty($row['mediaContent'])){
+
+                     ?>
                     <div class="carousel-item active">
                       <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
+                    <?php } ?>
+                    <?php if(!empty($row['mediaContent2'])){
+
+                     ?>
                     <div class="carousel-item">
                       <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent2']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
+                    <?php } ?>
+                    <?php if(!empty($row['mediaContent'])){
+
+                     ?>
                     <div class="carousel-item">
                       <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent3']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
+                    <?php } ?>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

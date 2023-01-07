@@ -2,16 +2,23 @@
 class Post {
   private $error = "";
 
-  public function createPost($data){
-    if(!empty($data['post'])){
-      $post = addslashes($data['post']);
-      $query = "INSERT INTO posts (textContent) VALUES ('textContent')";
-      $DB = new database();
-      $DB->save($query);
-    } else {
-      $this->error = "Type Something<br>";
-    }
+  public function createPost($userid,$data){
+    $DB = new database();
+    if(!empty($data['content'])){
+      try {
+        $textContent = addslashes($data['content']);
+        $location = $DB->read("SELECT location FROM users WHERE ID = '$userid'");
+        $location = $location[0]['location'];
 
+        //echo $location;
+        $mediaContent1 = base64_encode($data['myImage1']);
+
+        $query = "INSERT INTO posts (textContent, UserID, mediaContent, Location) VALUES ('$textContent','$userid', '$mediaContent1','$location')";
+        $DB->save($query);
+      } catch (Exception $e) {
+        echo 'Message: ' .$e->getMessage();
+      }
+    }
     return $this->error;
   }
 

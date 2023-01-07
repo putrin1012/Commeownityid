@@ -7,14 +7,14 @@
               <form method="post">
               <div class="dropdown">
                 <select class="btn btn-secondary dropdown-toggle" type="button" name="PostCategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Post Category">
-                <option>Kategori Post</option>
+                <!--option>Kategori Post</option-->
                 <option value="Open Adopt">Open Adopt</option>
                 <option value="Need Adopter">Need Adopter</option>
                 <option value="Miscellanous">Miscellanous</option>
                 </select>
               </div>
             </br>
-            		<textarea type="text" class="form-control" rows="2" placeholder="Write something here..."></textarea>
+            		<textarea type="text" name="content" class="form-control" rows="2" placeholder="Write something here..."></textarea>
             		<div class="mar-top clearfix">
                 </br>
                   <?php include("tagsInput.php");?>
@@ -23,19 +23,19 @@
 <div style="display:inline-block;position:relative;width:200px;">
 
     <img id="output1" width="200" style="display:inline-block;position:relative;z-index:0;"/>
-    <div id="outputx1" onclick="removeFile('1')" style="display:none;width:20px;height:20px;position:absolute;;right:0px;top:0px;z-index:1;padding:4px;background-color:red;color:white;font-weight:bold;">
+    <div id="outputx1" onclick="removeFile('1')" style="display:none;width:20px;height:20px;position:absolute;;right:0px;top:0px;z-index:1;padding:4px;background-color:black;color:white;font-weight:bold;">
       x
     </div>
 </div>
 <div style="display:inline-block;position:relative;width:200px;">
 <img id="output2" width="200" style="display:inline-block;position:relative;z-index:0;"/>
-<div id="outputx2" onclick="removeFile('2')" style="display:none;width:20px;height:20px;position:absolute;;right:0px;top:0px;z-index:1;padding:4px;background-color:red;color:white;font-weight:bold;">
+<div id="outputx2" onclick="removeFile('2')" style="display:none;width:20px;height:20px;position:absolute;;right:0px;top:0px;z-index:1;padding:4px;background-color:black;color:white;font-weight:bold;">
   x
 </div>
 </div>
 <div style="display:inline-block;position:relative;width:200px;">
 <img id="output3" width="200" style="display:inline-block;position:relative;z-index:0;"/>
-<div id="outputx3" onclick="removeFile('3')" style="display:none;width:20px;height:20px;position:absolute;;right:0px;top:0px;z-index:1;padding:4px;background-color:red;color:white;font-weight:bold;">
+<div id="outputx3" onclick="removeFile('3')" style="display:none;width:20px;height:20px;position:absolute;;right:0px;top:0px;z-index:1;padding:4px;background-color:black;color:white;font-weight:bold;">
   x
 </div>
 </div>
@@ -98,3 +98,20 @@
           </div>
         </div>
       </div>
+
+      <?php
+      if ($_SERVER['REQUEST_METHOD'] == "POST"){
+        if($_POST['content'] == "") {
+          echo "<script type='text/javascript'>alert('Ketikkan sesuatu!');</script>";
+        } else {
+          $postNew = new Post();
+          $userid = $_SESSION["ID"];
+          $result = $postNew->createPost($userid, $_POST);
+          //header("Refresh:0");
+          //echo "<script window.location.reload();</script>";
+          if ($result = "") {
+            header("Refresh:0");
+          }
+        }
+      }
+      ?>

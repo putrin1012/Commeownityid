@@ -32,14 +32,14 @@ include("Class/User.php");
 
 
 
- <?php
+ <!--?php
 
    if($_SERVER['REQUEST_METHOD'] == "POST"){
      //print_r($_POST);
      $post = new Post();
      $post->createPost($_POST);
    }
- ?>
+ ?-->
 
 
    <div class="row">
