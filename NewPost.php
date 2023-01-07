@@ -111,6 +111,7 @@
           //echo "<script window.location.reload();</script>";
           if ($result = "") {
             header("Refresh:0");
+            die;
           }
         }
       }

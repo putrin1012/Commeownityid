@@ -12,7 +12,7 @@
                 <div class="pull-left meta">
                     <div class="title h5">
                         <a href="#"><b><?php echo $row_user['userName']??'';?></b></a>
-                        made a post.
+
                     </div>
                     <h6 class="text-muted time"><?php echo $row['dateTimeCreated']??'';?></h6>
                 </div>
@@ -70,10 +70,10 @@
                 <!--/div-->
                 <div class="stats">
                     <a href="#" class="btn btn-default stat-item">
-                        <i class="fa fa-thumbs-up icon"></i>2
+                        <i class="fa fa-thumbs-up icon"></i><?php echo $row['Likes']??''; ?>
                     </a>
                     <a href="#" class="btn btn-default stat-item">
-                        <i class="fa fa-share icon"></i>12
+                        <i class="fa fa-share icon"></i>
                     </a>
                     <a href="#" class="btn btn-default stat-item">
                         <i class="fa fa-bookmark icon"></i>
@@ -89,19 +89,16 @@
                     </span>
                 </div>
                 <ul class="comments-list">
-                    <li class="comment">
-                        <a class="pull-left" href="#">
-                            <img class="avatar" src="https://bootdey.com/img/Content/user_1.jpg" alt="avatar">
-                        </a>
-                        <div class="comment-body">
-                            <div class="comment-heading">
-                                <h4 class="user">Gavino Free</h4>
-                                <h5 class="time">5 minutes ago</h5>
-                            </div>
-                            <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
-                        </div>
+                  <?php
+                  $comment = new comment();
+                  $comments =  $comment->getComment($row['PostID']);
+                  if($comments){
+                    foreach($comments as $rowComment){
+                      $commenter = new User();
+                      $row_commenter = $commenter->getData($rowComment['userID']);
+                      include("comments.php");
 
-                    </li>
+                  }}?>
                 </ul>
             </div>
         </div>

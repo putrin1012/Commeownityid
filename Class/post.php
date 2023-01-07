@@ -7,13 +7,14 @@ class Post {
     if(!empty($data['content'])){
       try {
         $textContent = addslashes($data['content']);
+        $postCategory = addslashes($data['PostCategory']);
         $location = $DB->read("SELECT location FROM users WHERE ID = '$userid'");
         $location = $location[0]['location'];
 
         //echo $location;
         $mediaContent1 = base64_encode($data['myImage1']);
 
-        $query = "INSERT INTO posts (textContent, UserID, mediaContent, Location) VALUES ('$textContent','$userid', '$mediaContent1','$location')";
+        $query = "INSERT INTO posts (textContent, UserID, mediaContent, Location, postCategory) VALUES ('$textContent','$userid', '$mediaContent1','$location','$postCategory')";
         $DB->save($query);
       } catch (Exception $e) {
         echo 'Message: ' .$e->getMessage();
@@ -35,7 +36,7 @@ class Post {
 
   public function getPostProfile($id) {
     // update --- change id to UserID in the query -----
-    $query = "SELECT * FROM posts WHERE UserID = '$id' ORDER BY dateTimeCreated";
+    $query = "SELECT * FROM posts WHERE UserID = '$id' ORDER BY dateTimeCreated DESC";
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {
@@ -43,6 +44,10 @@ class Post {
     } else {
       return false;
     }
+  }
+
+  public function addLikes($id) {
+
   }
 
 }

@@ -4,6 +4,7 @@
  include("New_header.html");
  include("Class/db.php");
  include("Class/post.php");
+ include("Class/comment.php");
 
 //  update --- add user class ---
 include("Class/User.php");

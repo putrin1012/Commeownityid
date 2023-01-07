@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<?php
+  $userSidebar = new User();
+  $userprofile = $userSidebar->getData($_SESSION['ID']);
+?>
 
     <div class="container">
         <div class="row">
@@ -30,10 +33,10 @@
                                         </button>
                                     </div>
                                     <strong>HoomanCAT</strong>
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Username:</span>Soma Kyo</li>
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>Jawa Barat</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Username:</span><?php echo $userprofile['userName']??''; ?></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span><?php echo $userprofile['Location']??''; ?></li>
                                         <!-- <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> edith@mail.com</li> -->
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Kontak:</span> <a href="" style="font-color='black';"> Whatsapp (Kyo)</span></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Kontak:</span> <a style="font-color='black';"> Whatsapp (Kyo)</span></li>
                                         <!-- <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> 507 - 541 - 4567</li> -->
                             </div>
                         </div>
