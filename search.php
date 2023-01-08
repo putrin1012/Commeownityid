@@ -5,7 +5,8 @@
  include("Class/User.php");
  include("Class/comment.php");
  include("Class/post.php");
-include("Class/bookmark.php");
+ include("Class/bookmark.php");
+ include("Class/tag.php");
 
 
  ?>
@@ -14,7 +15,7 @@ include("Class/bookmark.php");
      <div class="col-2">
        <?php include("Sidebar.php");
        $post = new Post();
-       $posts = $post->getPostBookmarked($_SESSION['ID']);
+       $posts = $post->getPostBySearch($_GET['searchTag']);
        ?>
      </div>
     <div class="col-8">

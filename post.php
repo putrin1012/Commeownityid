@@ -23,6 +23,11 @@
                 <button class="btn" type="button" style="background-color:#6C452D; color:white;">
                   <?php echo $row['postCategory']??''; ?>
                 </button>
+
+                <?php
+                if(!empty($row['mediaContent']) || !empty($row['mediaContent2']) || !empty($row['mediaContent3'])){
+
+                ?>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                   <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -34,21 +39,21 @@
 
                      ?>
                     <div class="carousel-item active">
-                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
+                      <img src="<?= 'data:image/jpeg;base64,'.$row['mediaContent'];?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                     <?php } ?>
                     <?php if(!empty($row['mediaContent2'])){
 
                      ?>
                     <div class="carousel-item">
-                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent2']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
+                      <img src="<?= 'data:image/jpeg;base64,'.$row['mediaContent2']; ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                     <?php } ?>
                     <?php if(!empty($row['mediaContent'])){
 
                      ?>
                     <div class="carousel-item">
-                      <img src="<?= 'data:image/jpeg;base64,'.base64_encode($row['mediaContent3']); ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
+                      <img src="<?= 'data:image/jpeg;base64,'.$row['mediaContent3']; ?>" class="d-block w-100" alt="..." style="width:640px;height:360px">
                     </div>
                     <?php } ?>
                   </div>
@@ -59,28 +64,36 @@
                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                  </button
-              </br>
-                <p><?php echo $row['textContent']??''; ?></p>
-                <!--div-->
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag1</a>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag2</a>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag3</a>
-                  <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;">Tag4</a>
-                <!--/div-->
-                <div class="stats">
-                    <a href="#" class="btn btn-default stat-item">
-                        <i class="fa fa-thumbs-up icon"></i><?php echo $row['Likes']??''; ?>
-                    </a>
-                    <a href="#" class="btn btn-default stat-item">
-                        <i class="fa fa-share icon"></i>
-                    </a>
-                    <a href="#" class="btn btn-default stat-item">
-                        <i class="fa fa-bookmark icon"></i>
-                    </a>
-                </div>
+                  </button>
+
+
 
             </div>
+          <?php }?>
+            <div>    </br>
+                  <p><?php echo $row['textContent']??''; ?></p>
+                  <!--div-->
+                  <?php $tags = tag::getTags($row['PostID']);
+                        foreach($tags as $tag) {
+                          //print_r($tag);
+                  ?>
+
+                    <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;"><?= $tag[0];?></a>
+                  <!--/div-->
+                <?php }?>
+                  <div style="clear:both"></div>
+                  <div class="stats">
+                      <a href="likes.php?id=<?php echo $row['PostID']?>" class="btn btn-default stat-item">
+                          <i class="fa fa-thumbs-up icon"></i><?php echo $row['Likes']??''; ?>
+                      </a>
+                      <a href="#" class="btn btn-default stat-item">
+                          <i class="fa fa-share icon"></i>
+                      </a>
+                      <a href="bookmarked.php?id=<?php echo $row['PostID']?>" class="btn btn-default stat-item">
+                          <i style="<?= bookmark::isBookmarked($_SESSION['ID'],$row['PostID'])?'color:red':''?>" class="fa fa-bookmark icon"></i>
+
+                      </a>
+                  </div></div>
             <div class="post-footer">
                 <div class="input-group">
                     <input class="form-control" placeholder="Add a comment" type="text">
