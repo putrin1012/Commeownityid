@@ -107,6 +107,7 @@
           $postNew = new Post();
           $userid = $_SESSION["ID"];
           $result = $postNew->createPost($userid, $_POST);
+          //print_r($_POST);
           //header("Refresh:0");
           //echo "<script window.location.reload();</script>";
           if ($result = "") {
