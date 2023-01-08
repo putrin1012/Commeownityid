@@ -46,6 +46,18 @@ class Post {
     }
   }
 
+  public function getPostBookmarked($userid) {
+    $query = "SELECT * FROM posts LEFT JOIN bookmarks ON bookmarks.PostID = posts.PostID WHERE bookmarks.UserID = '$userid'";
+    $DB = new database();
+    $result = $DB->read($query);
+    if (!empty($result)) {
+      print_r($result);
+      return $result;
+    } else {
+      return false;
+    }
+  }
+
   public function addLikes($id) {
 
   }

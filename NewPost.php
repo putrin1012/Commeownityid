@@ -110,7 +110,7 @@
           //header("Refresh:0");
           //echo "<script window.location.reload();</script>";
           if ($result = "") {
-            header("Refresh:0");
+            header("Location: ".$_SERVER['PHP_SELF']);
             die;
           }
         }

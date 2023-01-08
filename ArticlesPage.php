@@ -5,6 +5,7 @@ include("New_header.html");
 // update --- add db, article class ---
 include("Class/db.php");
 include("Class/Article.php");
+include("Class/User.php");
 
 // update --- check login session ---
 /*session_start();
