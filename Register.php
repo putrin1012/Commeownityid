@@ -11,38 +11,36 @@
         $Password = $_POST['Password'];
         $Password2 = $_POST['Password2'];
 
-        if($Password != $Password2){
-            echo "<script type='text/javascript'>alert('Konfirmasi password tidak sesuai!');location='Register.php';</script>";
+        if ((strlen($userName) == 0) || (strlen($Email) == 0) || ($Location == "Select your location...") || (strlen($Password) == 0)){
+            echo "<script type='text/javascript'>alert('Semua data harus terisi!');location='Register.php';</script>";
         }else{
-            $password_hash = password_hash($Password, PASSWORD_DEFAULT);
-            $sql = $conn->prepare("SELECT COUNT(*) AS 'total' FROM users WHERE Email = :Email");
-            $sql->execute(array(':Email' => $Email));
-            $result = $sql->fetchObject();
-
-            if ($result->total > 0){
-                echo "<script type='text/javascript'>alert('Alamat email sudah terdaftar!')</script>";
-            }else {
-
-                $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
-
-                $stmtinsert = $conn->prepare($sql);
-                $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
-                if ($result) {
-                    echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
-                } else {
-                    echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
+            if(strlen($Password) < 8){
+                echo "<script type='text/javascript'>alert('Panjang password harus lebih dari 8 karakter!');location='Register.php';</script>";
+            }else{
+                if($Password != $Password2){
+                    echo "<script type='text/javascript'>alert('Konfirmasi password tidak sesuai!');location='Register.php';</script>";
+                }else{
+                    $password_hash = password_hash($Password, PASSWORD_DEFAULT);
+                    $sql = $conn->prepare("SELECT COUNT(*) AS 'total' FROM users WHERE Email = :Email");
+                    $sql->execute(array(':Email' => $Email));
+                    $result = $sql->fetchObject();
+        
+                    if ($result->total > 0){
+                        echo "<script type='text/javascript'>alert('Alamat email sudah terdaftar!')</script>";
+                    }else {
+        
+                        $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
+        
+                        $stmtinsert = $conn->prepare($sql);
+                        $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
+                        if ($result) {
+                            echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
+                        } else {
+                            echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
+                        }
+                    }
                 }
             }
-        
-            // $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES('$userName', '$Email', '$Location', '$Password')";
-            // $result = $DB->save($sql);
-            // if ($result) {
-            //     echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
-            //     header("Location: login.php");
-            //     die;
-            // } else {
-            //     echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
-            // }
         }
     }
 ?>
@@ -105,7 +103,7 @@
                         <div class="dropdown">
                             <h3>Location(City)</h3>
                             <select class="btn btn-secondary dropdown-toggle" type="button" name="Location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Location" style="width:250px;">
-                                <option selected>Lokasi anda...</option>
+                                <option selected>Select your location...</option>
                                 <option value="Ambon">Ambon</option>
                                 <option value="Balikpapan">Balikpapan</option>
                                 <option value="Banda Aceh">Banda Aceh</option>
