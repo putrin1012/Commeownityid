@@ -4,7 +4,7 @@
 
           <div class="panel">
             <div class="panel-body">
-              <form method="post">
+              <form method="post" enctype="multipart/form-data">
               <div class="dropdown">
                 <select class="btn btn-secondary dropdown-toggle" type="button" name="PostCategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Post Category">
                 <!--option>Kategori Post</option-->
@@ -104,14 +104,18 @@
         if($_POST['content'] == "") {
           echo "<script type='text/javascript'>alert('Ketikkan sesuatu!');</script>";
         } else {
+          //var_dump($_FILES);
+          //echo "<pre>"; print_r($_FILES);
+          //die();
           $postNew = new Post();
           $userid = $_SESSION["ID"];
           $result = $postNew->createPost($userid, $_POST);
+          //print_r($_POST);
           //header("Refresh:0");
           //echo "<script window.location.reload();</script>";
-          if ($result = "") {
-            header("Refresh:0");
-            die;
+          if ($result == "") {
+            helper::redirect($_SERVER['PHP_SELF'].'?'.microtime());
+            die();
           }
         }
       }

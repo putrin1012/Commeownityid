@@ -290,14 +290,18 @@ div.content {
 
              <div class="col" style="max-width:1000px;">
                 <div class="form-group" role="search">
+                  <form action="search.php" method="get">
                   <input
                   class="form-control me-2"
                   type="search"
+                  name="searchTag"
                   data-role="tagsinput"
                   placeholder="Search here"
                   aria-label="Search"
                   style="width:100px !important;"/>
+                </form>
                 </div>
+
                 <!--a class="nav-link" href="index.php"><i class="fa fa-filter add-tooltip"></i>  Filter </a-->
               </div>
             </ul>

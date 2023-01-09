@@ -5,6 +5,9 @@
  include("Class/db.php");
  include("Class/post.php");
  include("Class/comment.php");
+ include("Class/helper.php");
+ include("Class/bookmark.php");
+ include("Class/tag.php");
 
 //  update --- add user class ---
 include("Class/User.php");

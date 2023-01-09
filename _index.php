@@ -9,6 +9,9 @@
 include("Class/post.php");
 include("Class/comment.php");
 include("Class/User.php");
+include("Class/helper.php");
+include("Class/bookmark.php");
+include("Class/tag.php");
  //include("Header.php");
  ?>
 
@@ -25,7 +28,7 @@ include("Class/User.php");
   $result = $DB->read($Locationquery);
 
   $location = $result[0]['Location'];
-  $posts = $post->getPostTimeline($location);
+
   //print_r($posts);
 ?>
 
@@ -50,6 +53,7 @@ include("Class/User.php");
     </br></br></br></br>
         <?php
         include("NewPost.php");
+        $posts = $post->getPostTimeline($location);
         ?></br></br><?php
         if($posts){
           foreach($posts as $row){
