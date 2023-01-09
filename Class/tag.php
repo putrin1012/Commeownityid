@@ -6,7 +6,7 @@ class tag {
     $DB->save($query);
   }
 
-  function getTags($postid) {
+  static function getTags($postid) {
     $query = "SELECT Tags FROM tags WHERE PostID = $postid";
     $DB = new database();
     $result = $DB->read($query);
