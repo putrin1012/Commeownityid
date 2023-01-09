@@ -95,12 +95,14 @@
                       </a>
                   </div></div>
             <div class="post-footer">
+              <!--form method="get"-->
                 <div class="input-group">
-                    <input class="form-control" placeholder="Add a comment" type="text">
+                    <input class="form-control" name="comment" placeholder="Add a comment" type="text">
                     <span class="input-group-addon">
                         <a href="#"> <i class="fa fa-edit"></i></a>
                     </span>
                 </div>
+              <!--/form-->
                 <ul class="comments-list">
                   <?php
                   $comment = new comment();
@@ -118,3 +120,19 @@
     </div>
 </div>
 </div>
+<?php
+if ($_SERVER['REQUEST_METHOD'] == "GET"){
+  if(!empty($_POST['comment'])) {
+    $commentNew = new comment();
+    $userid = $_SESSION["ID"];
+    $result = $commentNew->createComment($row['PostID'],$userid);
+    //print_r($_POST);
+    //header("Refresh:0");
+    //echo "<script window.location.reload();</script>";
+    if ($result == "") {
+      helper::redirect($_SERVER['PHP_SELF'].'?'.microtime());
+      die();
+    }
+  }
+}
+?>

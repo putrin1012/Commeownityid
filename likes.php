@@ -6,7 +6,7 @@ include("Class/helper.php");
 $id = $_GET['id'];
 $postLike = new Post();
 $postLike->addLikes($id);
-helper::redirect("_index.php");
+helper::redirect($_SERVER['PHP_SELF']);
 
 
 ?>
