@@ -13,25 +13,27 @@
 
         if($Password != $Password2){
             echo "<script type='text/javascript'>alert('Konfirmasi password tidak sesuai!');location='Register.php';</script>";
-        }
-        $password_hash = password_hash($Password, PASSWORD_DEFAULT);
-        $sql = $conn->prepare("SELECT COUNT(*) AS 'total' FROM users WHERE Email = :Email");
-        $sql->execute(array(':Email' => $Email));
-        $result = $sql->fetchObject();
+        }else{
+            $password_hash = password_hash($Password, PASSWORD_DEFAULT);
+            $sql = $conn->prepare("SELECT COUNT(*) AS 'total' FROM users WHERE Email = :Email");
+            $sql->execute(array(':Email' => $Email));
+            $result = $sql->fetchObject();
 
-        if ($result->total > 0){
-            echo '<p class="error">Alamat email sudah terdaftar!</p>';
-        }else {
+            if ($result->total > 0){
+                echo "<script type='text/javascript'>alert('Alamat email sudah terdaftar!')</script>";
+            }else {
 
-            $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
+                $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES(?,?,?,?)";
 
-            $stmtinsert = $conn->prepare($sql);
-            $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
-            if ($result) {
-                echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
-            } else {
-                echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
+                $stmtinsert = $conn->prepare($sql);
+                $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
+                if ($result) {
+                    echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
+                } else {
+                    echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
+                }
             }
+        
             // $sql = "INSERT INTO users(userName, Email, Location, Password) VALUES('$userName', '$Email', '$Location', '$Password')";
             // $result = $DB->save($sql);
             // if ($result) {
