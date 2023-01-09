@@ -15,7 +15,7 @@
             echo "<script type='text/javascript'>alert('Semua data harus terisi!');location='Register.php';</script>";
         }else{
             if(strlen($Password) < 8){
-                echo "<script type='text/javascript'>alert('Panjang password harus lebih dari 8 karakter!');location='Register.php';</script>";
+                echo "<script type='text/javascript'>alert('Panjang password minimal 8 karakter!');location='Register.php';</script>";
             }else{
                 if($Password != $Password2){
                     echo "<script type='text/javascript'>alert('Konfirmasi password tidak sesuai!');location='Register.php';</script>";
@@ -34,7 +34,7 @@
                         $stmtinsert = $conn->prepare($sql);
                         $result = $stmtinsert->execute([$userName, $Email, $Location, $Password]);
                         if ($result) {
-                            echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!')</script>";
+                            echo "<script type='text/javascript'>alert('Anda berhasil terdaftar!');location='Login.php';</script>";
                         } else {
                             echo '<p class="error">Oh no! ada sesuatu yang salah.. :(</p>';
                         }
@@ -101,9 +101,9 @@
                         <br />
                         <!-- <label class="my-1 mr-2" for="inlineFormCustomSelectLocation">Location</label> -->
                         <div class="dropdown">
-                            <h3>Location(City)</h3>
+                            <h3>Lokasi(Kota)</h3>
                             <select class="btn btn-secondary dropdown-toggle" type="button" name="Location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Location" style="width:250px;">
-                                <option selected>Select your location...</option>
+                                <option selected>Lokasi anda...</option>
                                 <option value="Ambon">Ambon</option>
                                 <option value="Balikpapan">Balikpapan</option>
                                 <option value="Banda Aceh">Banda Aceh</option>
@@ -206,8 +206,8 @@
                             <input class="input100" type="password" name="Password" placeholder="Password">
                             <span class="focus-input100"></span>
 
-                            <h3>Confirm Passsword</h3>
-                            <input class="input100" type="password" name="Password2" placeholder="Password2">
+                            <h3>Konfirmasi Passsword</h3>
+                            <input class="input100" type="password" name="Password2" placeholder="Konfirmasi Password">
                             <span class="focus-input100"></span>
                         </div>
                         <!-- <h3>Confirm Password</h3>
