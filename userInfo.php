@@ -3,11 +3,6 @@
   $userSidebar = new User();
   $userprofile = $userSidebar->getData($_SESSION['ID']);
 ?>
-=======
-
->>>>>>> HEAD
->>>>>>> 2dbd00a34c87fdc2a39c161263022835cebbd07b
-
     <div class="container">
         <div class="row">
             <div class="col">
@@ -40,13 +35,11 @@
                                     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Username:</span><?php echo $userprofile['userName']??''; ?></li>
                                     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span><?php echo $userprofile['Location']??''; ?></li>
                                         <!-- <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> edith@mail.com</li> -->
-<<<<<<< HEAD
                                     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Kontak:</span> <a style="font-color='black';"> Whatsapp (Kyo)</span></li>
                                         <!-- <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> 507 - 541 - 4567</li> -->
-=======
                                     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Kontak:</span> <a  style="font-color='black';"> Whatsapp (Kyo)</span></li>
                                         <!-- <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> 507 - 541 - 4567</li> -->
->>>>>>> 2dbd00a34c87fdc2a39c161263022835cebbd07b
+
                             </div>
                         </div>
                     </div>
