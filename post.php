@@ -91,7 +91,6 @@
                       </a>
                       <a href="bookmarked.php?id=<?php echo $row['PostID']?>" class="btn btn-default stat-item">
                           <i style="<?= bookmark::isBookmarked($_SESSION['ID'],$row['PostID'])?'color:red':''?>" class="fa fa-bookmark icon"></i>
-
                       </a>
                   </div></div>
             <div class="post-footer">
