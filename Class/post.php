@@ -70,7 +70,7 @@ class Post {
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {
-      print_r($result);
+      //print_r($result);
       return $result;
     } else {
       return false;

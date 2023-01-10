@@ -83,7 +83,7 @@
                 <?php }?>
                   <div style="clear:both"></div>
                   <div class="stats">
-                      <a href="likes.php?id=<?php echo $row['PostID']?>" class="btn btn-default stat-item">
+                      <a href="likes.php?id=<?php echo $row['PostID'];?>" class="btn btn-default stat-item">
                           <i class="fa fa-thumbs-up icon"></i><?php echo $row['Likes']??''; ?>
                       </a>
                       <a href="#" class="btn btn-default stat-item">
@@ -95,14 +95,12 @@
                       </a>
                   </div></div>
             <div class="post-footer">
-              <!--form method="get"-->
+              <form method="post">
                 <div class="input-group">
                     <input class="form-control" name="comment" placeholder="Add a comment" type="text">
-                    <span class="input-group-addon">
-                        <a href="#"> <i class="fa fa-edit"></i></a>
-                    </span>
+                    <button class="btn btn-sm btn-primary pull-right" name="comment_post" value=<?= $row['PostID']?> style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"> Post</button>
                 </div>
-              <!--/form-->
+              </form>
                 <ul class="comments-list">
                   <?php
                   $comment = new comment();
@@ -121,12 +119,12 @@
 </div>
 </div>
 <?php
-if ($_SERVER['REQUEST_METHOD'] == "GET"){
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['comment_post'])){
   if(!empty($_POST['comment'])) {
     $commentNew = new comment();
     $userid = $_SESSION["ID"];
-    $result = $commentNew->createComment($row['PostID'],$userid);
-    //print_r($_POST);
+    $result = $commentNew->createComment($_POST['comment_post'],$userid);
+    print_r($_POST);
     //header("Refresh:0");
     //echo "<script window.location.reload();</script>";
     if ($result == "") {

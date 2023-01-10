@@ -14,8 +14,8 @@ class comment {
 
   public function createComment($postid, $userid) {
     $DB = new database();
-    $textContent = $_GET['comment'];
-    $query = "INSERT INTO comments (userID, textContent) VALUES ('$userid','$textContent') WHERE postID = '$postid' ORDER BY DateTimePosted DESC";
+    $textContent = $_POST['comment'];
+    $query = "INSERT INTO comments (postID,userID, textContent) VALUES ('$postid','$userid','$textContent')";
     $result = $DB->save($query);
   }
 }

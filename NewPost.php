@@ -19,7 +19,7 @@
                 </br>
                   <?php include("tagsInput.php");?>
                 </br>
-                <button class="btn btn-sm btn-primary pull-right" style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"> Post</button>
+                <button class="btn btn-sm btn-primary pull-right" name="submit_post" value="Confirm" style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"> Post</button>
 <div style="display:inline-block;position:relative;width:200px;">
 
     <img id="output1" width="200" style="display:inline-block;position:relative;z-index:0;"/>
@@ -80,17 +80,17 @@
         }
       };
     </script>
-                  <label>
+                  <!--label>
                     <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" data-original-title="Add Video" data-toggle="tooltip"></a>
                     <input type="file" name="myImage" accept="video/*" style="display:none;"/>
-                  </label>
+                  </label-->
                   <label>
                     <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" data-original-title="Add Photo" data-toggle="tooltip"></a>
                     <input type="file" id="myImage0" name="myImage0"  onchange="loadFile(event)" accept="image/png, image/gif, image/jpeg" style="display:none;"/>
                   </label>
-                  <input type="file" id="myImage1" name="myImage1"  accept="image/png, image/gif, image/jpeg" style="display:none;"/>
-                  <input type="file" id="myImage2" name="myImage2"  accept="image/png, image/gif, image/jpeg" style="display:none;"/>
-                  <input type="file" id="myImage3" name="myImage3"  accept="image/png, image/gif, image/jpeg" style="display:none;"/>
+                  <input type="file" id="myImage1" name="myImage1"  accept="image/jpeg" style="display:none;"/>
+                  <input type="file" id="myImage2" name="myImage2"  accept="image/jpeg" style="display:none;"/>
+                  <input type="file" id="myImage3" name="myImage3"  accept="image/jpeg" style="display:none;"/>
           			<!--a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#" data-original-title="Add File" data-toggle="tooltip"></a-->
           		</div>
             </form>
@@ -101,7 +101,8 @@
 
       <?php
       if ($_SERVER['REQUEST_METHOD'] == "POST"){
-        if($_POST['content'] == "") {
+        if(isset($_POST['submit_post'])){
+        if($_POST['content'] == "" ) {
           echo "<script type='text/javascript'>alert('Ketikkan sesuatu!');</script>";
         } else {
           //var_dump($_FILES);
@@ -119,4 +120,5 @@
           }
         }
       }
+    }
       ?>

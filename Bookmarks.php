@@ -6,7 +6,7 @@
  include("Class/comment.php");
  include("Class/post.php");
 include("Class/bookmark.php");
-
+include("Class/tag.php");
 
  ?>
 

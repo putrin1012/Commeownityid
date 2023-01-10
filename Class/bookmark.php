@@ -14,11 +14,11 @@ class bookmark {
 
   public function addBookmark($userid, $postid) {
     if (self::isBookmarked($userid, $postid)) {
-      echo 1;
+      //echo 1;
       return;
     }
 
-    echo 2;
+    //echo 2;
     $query = "INSERT into bookmarks (PostID, UserID) VALUES ('$postid','$userid')";
     $DB = new database();
     $DB->save($query);
