@@ -66,7 +66,7 @@ class Post {
   }
 
   public function getPostBookmarked($userid) {
-    $query = "SELECT * FROM posts LEFT JOIN bookmarks ON bookmarks.PostID = posts.PostID WHERE bookmarks.UserID = '$userid'";
+    $query = "SELECT * FROM posts LEFT JOIN bookmarks ON bookmarks.PostID = posts.PostID WHERE bookmarks.UserID = '$userid' ORDER BY bookmarkTime DESC";
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {
@@ -136,6 +136,18 @@ class Post {
 
   public function getPostBySearch($searchTag) {
     $query = "SELECT * FROM posts WHERE PostID IN (SELECT PostID FROM tags WHERE Tags='$searchTag') ORDER BY dateTimeCreated DESC";
+    $DB = new database();
+    $result = $DB->read($query);
+    if (!empty($result)) {
+      return $result;
+    } else {
+      return false;
+    }
+  }
+
+  public function getPostbyID() {
+    $id = $_GET['id'];
+    $query = "SELECT * FROM posts WHERE PostID = $id LIMIT 1";
     $DB = new database();
     $result = $DB->read($query);
     if (!empty($result)) {

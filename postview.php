@@ -1,0 +1,74 @@
+<?php
+//include("Header.php");
+
+ include("New_header.html");
+
+ ?>
+
+<?php include("Class/db.php");
+include("Class/post.php");
+include("Class/comment.php");
+include("Class/User.php");
+include("Class/helper.php");
+include("Class/bookmark.php");
+include("Class/tag.php");
+ //include("Header.php");
+ ?>
+
+<?php
+    include("session.php");
+
+
+  //collect posts
+
+  $post = new Post();
+  $DB = new database();
+  $userID = $_SESSION["ID"];
+
+
+  //print_r($posts);
+?>
+
+
+
+
+ <!--?php
+
+   if($_SERVER['REQUEST_METHOD'] == "POST"){
+     //print_r($_POST);
+     $post = new Post();
+     $post->createPost($_POST);
+   }
+ ?-->
+
+
+   <div class="row">
+     <div class="col-2">
+       <?php include("Sidebar.php");?>
+     </div>
+    <div class="col-8">
+    </br></br></br></br>
+        <?php
+        $posts = $post->getPostbyID();
+        ?></br></br><?php
+        if($posts){
+          foreach($posts as $row){
+            $user = new User();
+            $row_user = $user->getData($row['UserID']);
+
+            include("post.php");
+
+
+
+        ?>
+      </br>
+      <?php
+      }
+    }
+        ?>
+
+      </div>
+    </div>
+  <?php
+include("footer.php");
+ ?>

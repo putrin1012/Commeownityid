@@ -21,7 +21,6 @@ include("Class/tag.php");
     </br></br></br></br>
     <div class="col" style="margin-left:25px;width:1020px;">
       <form class="d-flex" role="search">
-
           <input class="form-control me-2"  type="search" placeholder="search here" aria-label="Search">
       </form>
       </br>

@@ -2,8 +2,12 @@
 
 
 
-<div class="container bootstrap snippets bootdey">
+<div class="container bootstrap snippets bootdey" >
+
     <div class="col-sm-8">
+      <!--a href="postview.php?id=<?= $row['PostID']?>">
+        <span style="position:absolute;width:100%;height:100%;top:0;left:0;z-index:1;"></span>
+      </a-->
         <div class="panel panel-white post panel-shadow" style="background-color:white;width:1000px">
             <div class="post-heading post-white">
                 <div class="pull-left image">
@@ -12,11 +16,21 @@
                 <div class="pull-left meta">
                     <div class="title h5">
                         <a href="#"><b><?php echo $row_user['userName']??'';?></b></a>
-
                     </div>
                     <h6 class="text-muted time"><?php echo $row['dateTimeCreated']??'';?></h6>
-                </div>
             </div>
+            <div class="pull-right meta">
+            <div class="dropdown" style="background-color:white;box-shadow: :white;">
+              <select onChange="window.location.href=this.value">
+                <option selected disabled></option>
+                <option value="delete.php?id=<?= $row['PostID']?>">Delete</option>
+                <option value="edit.php?id=<?= $row['PostID']?>">Edit</option>
+
+              </select>
+            </div>
+
+        </div>
+      </div>
 
             <div class="post-description">
 
@@ -78,7 +92,7 @@
                           //print_r($tag);
                   ?>
 
-                    <a class="badge badge-primary" href="#" style="background-color:#6C452D;text-decoration:none;"><?= $tag[0];?></a>
+                    <a class="badge badge-primary" href="search.php?searchTag=<?= $tag[0];?>" style="background-color:#6C452D;text-decoration:none;"><?= $tag[0];?></a>
                   <!--/div-->
                 <?php }?>
                   <div style="clear:both"></div>
@@ -97,7 +111,7 @@
               <form method="post">
                 <div class="input-group">
                     <input class="form-control" name="comment" placeholder="Add a comment" type="text">
-                    <button class="btn btn-sm btn-primary pull-right" name="comment_post" value=<?= $row['PostID']?> style="background-color:#6C452D;border-color:#6C452D;width:100px;" type="submit"> Post</button>
+                    <button class="btn btn-sm btn-primary pull-right" name="comment_post" value=<?= $row['PostID']?> style="background-color:#6C452D;border-color:#6C452D;width:100px;height:40px;top:10px;" type="submit"> Post</button>
                 </div>
               </form>
                 <ul class="comments-list">
@@ -117,6 +131,7 @@
     </div>
 </div>
 </div>
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['comment_post'])){
   if(!empty($_POST['comment'])) {
