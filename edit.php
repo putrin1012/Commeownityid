@@ -25,12 +25,8 @@ include("Class/tag.php");
   $post = new Post();
   $DB = new database();
   $userID = $_SESSION["ID"];
-  $Locationquery = "SELECT Location FROM users WHERE ID='$userID'";
-  $result = $DB->read($Locationquery);
+  $postToEdit = $post->getPostbyID();
 
-  $location = $result[0]['Location'];
-
-  //print_r($posts);
 ?>
 
 
@@ -53,29 +49,12 @@ include("Class/tag.php");
     <div class="col-8">
     </br></br></br></br>
         <?php
-        include("NewPost.php");
-        $posts = $post->getPostTimeline($location);
-        ?></br></br><?php
-        if($posts){
-          foreach($posts as $row){
-            $user = new User();
-            $row_user = $user->getData($row['UserID']);
-
-            include("post.php");
-
-
-
-        ?>
-      </br>
-      <?php
-      }
-    }
+        include("editpost.php");
+        print_r($postToEdit);
         ?>
 
       </div>
     </div>
-
-
   <?php
 include("footer.php");
  ?>

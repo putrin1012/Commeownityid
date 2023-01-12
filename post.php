@@ -8,7 +8,7 @@
       <!--a href="postview.php?id=<!--?= //$row['PostID'];?>">
         <span style="position:absolute;width:100%;height:100%;top:0;left:0;z-index:1;"></span>
       </a-->
-        <div class="panel panel-white post panel-shadow" style="background-color:white;width:1000px">
+        <div class="panel panel-white post panel-shadow" style="background-color:white;width:1000px;">
             <div class="post-heading post-white">
                 <div class="pull-left image">
                     <img src="https://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
@@ -20,11 +20,11 @@
                     <h6 class="text-muted time"><?php echo $row['dateTimeCreated']??'';?></h6>
             </div>
             <div class="pull-right meta">
-            <div class="dropdown" style="background-color:white;box-shadow: :white;">
-              <select onChange="window.location.href=this.value">
+            <div class="dropdown" style="background-color:white;box-shadow:white;border:none;">
+              <select onChange="window.location.href=this.value" style="border:none;background:transparent;z-index:10000;">
                 <option selected disabled></option>
                 <option value="delete.php?id=<?=$row['PostID'];?>">Delete</option>
-                <option value="edit.php?id=<?=$row['PostID'];?>">Edit</option>
+                <!--option value="edit.php?id=<!?=$row['PostID'];?>">Edit</option-->
 
               </select>
             </div>
@@ -100,9 +100,9 @@
                       <a href="likes.php?id=<?php echo $row['PostID'];?>" class="btn btn-default stat-item">
                           <i class="fa fa-thumbs-up icon"></i><?php echo $row['Likes']??''; ?>
                       </a>
-                      <a href="#" class="btn btn-default stat-item">
+                      <!--a href="#" class="btn btn-default stat-item">
                           <i class="fa fa-share icon"></i>
-                      </a>
+                      </a-->
                       <a href="bookmarked.php?id=<?php echo $row['PostID']?>" class="btn btn-default stat-item">
                           <i style="<?= bookmark::isBookmarked($_SESSION['ID'],$row['PostID'])?'color:red':''?>" class="fa fa-bookmark icon"></i>
                       </a>

@@ -114,7 +114,9 @@ class Post {
   }
 
   public function deletePost($id) {
-
+    $query = "DELETE FROM posts WHERE PostID = $id";
+    $DB = new database();
+    $result = $DB->save($query);
   }
 
   public function addLikes($id) {

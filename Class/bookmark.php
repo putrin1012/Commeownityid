@@ -1,6 +1,7 @@
 <?php
 
 class bookmark {
+  
   public static function isBookmarked($userid, $postid) {
     $DB = new database();
     $query = "SELECT COUNT(bookmarkID) as countID from bookmarks WHERE UserID = $userid AND PostID = $postid";
