@@ -5,7 +5,8 @@
 
  ?>
 
-<?php include("Class/db.php");
+<?php
+include("Class/db.php");
 include("Class/post.php");
 include("Class/comment.php");
 include("Class/User.php");
